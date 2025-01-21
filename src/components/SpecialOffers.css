@@ -1,0 +1,64 @@
+.special-offers {
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    overflow-x: auto; 
+    overflow-y: hidden; 
+    white-space: nowrap; 
+  }
+  
+  .special-offers h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .offers-row {
+    display: inline-flex; 
+    gap: 15px; 
+  }
+  
+  .offer-category {
+    flex: 0 0 calc(33.33% - 15px); 
+    width: calc(33.33% - 15px);
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .offer-category h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #111;
+  }
+  
+  .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .product img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .product p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .product span {
+    font-size: 0.9rem;
+    color: green;
+    font-weight: bold;
+  }
+  

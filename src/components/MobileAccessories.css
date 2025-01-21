@@ -1,0 +1,74 @@
+.mobile-accessories {
+    padding: 20px;
+    margin: 0; 
+    width: 100%;
+    background-color: #f8fbff; 
+    border: 1px solid #d4e4f7; 
+    border-radius: 8px;
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.mobile-accessories h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #1a73e8; 
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.mobile-accessories h3 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #3a506b; 
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    text-transform: capitalize;
+}
+
+.mobile-accessories p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    text-align: justify;
+    color: #4b6584; 
+}
+
+.mobile-accessories ul {
+    list-style-type: square;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.mobile-accessories ul li {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: #576574; 
+}
+
+.mobile-accessories a {
+    color: #1a73e8; 
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.mobile-accessories a:hover {
+    text-decoration: none;
+    color: #0b4ba1; 
+}
+
+.mobile-accessories h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #1a73e8; 
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
