@@ -9,26 +9,26 @@ const SpecialOffers = () => {
         <div className="offer-category">
           <h3>New Year Specials</h3>
           <div className="product">
-            <img src="/assets/casual-shirt.jpg" alt="Casual Shirts" />
-            <p>Casual Shirts</p>
+            <img src="/assets/PowerBanks.jpg" alt="PowerBanks" />
+            <p>PowerBanks</p>
             <span>Min. 50% Off</span>
           </div>
           <div className="product">
-            <img src="/assets/mens-tshirt.jpg" alt="Men's T-shirts" />
-            <p>Men's T-shirts</p>
+            <img src="/assets/PenDrives.jpg" alt="PenDrives" />
+            <p>PenDrives</p>
             <span>Min. 50% Off</span>
           </div>
         </div>
         <div className="offer-category">
           <h3>Special Days Special Offers</h3>
           <div className="product">
-            <img src="/assets/bath-brush.jpg" alt="Bath Brush" />
-            <p>Bath Brush</p>
+            <img src="/assets/Speakers.jpg" alt="Speakers" />
+            <p>Speakers</p>
             <span>Special offer</span>
           </div>
           <div className="product">
-            <img src="/assets/deodorants.jpg" alt="Deodorants" />
-            <p>Deodorants</p>
+            <img src="/assets/Wireless Earphones.jpg" alt="Wireless Earphones" />
+            <p>Wireless Earphones</p>
             <span>Min. 50% Off</span>
           </div>
         </div>

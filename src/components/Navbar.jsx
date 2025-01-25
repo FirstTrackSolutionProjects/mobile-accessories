@@ -1,8 +1,15 @@
-import React from 'react';
-import './Navbar.css'; 
+import React, { useState } from 'react';
+import './Navbar.css';
 import logo from "../assets/logo.jpg";
+import { FaShoppingCart, FaUser, FaBars } from 'react-icons/fa';
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-logo">
@@ -14,22 +21,28 @@ function Navbar() {
         <button>Search</button>
       </div>
 
-      <div className="navbar-links">
+      <div className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
         <a href="#">Home</a>
         <a href="#">Products</a>
         <a href="#">About Us</a>
         <a href="#">Contact</a>
       </div>
 
-      
       <div className="navbar-icons">
         <a href="#" className="cart">
-          Cart <span className="cart-count">0</span>
+          <FaShoppingCart />
+          <span className="cart-count">0</span>
         </a>
-        <a href="#" className="login">Log In</a>
+        <a href="#" className="login">
+          <FaUser />
+        </a>
       </div>
+
+      <button className="navbar-toggle" onClick={toggleMenu}>
+        <FaBars />
+      </button>
     </nav>
   );
 }
 
-export default Navbar;
+export default Navbar;

@@ -3,11 +3,9 @@ import "./Slideshow.css";
 
 const Slideshow = () => {
   const images = [
-    "/assets/image1.png",
-    "/assets/image2.png",
-    "/assets/image3.png",
-    "/assets/image4.png", 
-    "/assets/image5.png",
+    "/assets/image--1.jpg",
+    "/assets/image--2.jpg",
+    "/assets/image--3.jpg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
