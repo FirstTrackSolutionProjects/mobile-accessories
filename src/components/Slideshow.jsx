@@ -6,6 +6,7 @@ const Slideshow = () => {
     "/assets/image--1.jpg",
     "/assets/image--2.jpg",
     "/assets/image--3.jpg",
+    "/assets/image--4.jpg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

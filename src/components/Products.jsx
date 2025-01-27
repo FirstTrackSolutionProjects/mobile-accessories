@@ -11,14 +11,14 @@ import product8 from "../assets/product8.jpg";
 
 
 const products = [
-  { id: 1, name: "Product 1", price: "₹10.00", originalPrice: "₹15.00", image: product1},
-  { id: 2, name: "Product 2", price: "₹89.99", originalPrice: "₹99.99", image: product2},
-  { id: 3, name: "Product 3", price: "₹79.99", originalPrice: "₹89.99", image: product3},
-  { id: 4, name: "Product 4", price: "₹69.99", originalPrice: "₹79.99", image: product4},
-  { id: 5, name: "Product 5", price: "₹59.99", originalPrice: "₹69.99", image: product5},
-  { id: 6, name: "Product 6", price: "₹59.99", originalPrice: "₹69.99", image: product6},
-  { id: 7, name: "Product 7", price: "₹59.99", originalPrice: "₹69.99", image: product7},
-  { id: 8, name: "Product 8", price: "₹59.99", originalPrice: "₹69.99", image: product8},
+  { id: 1, name: "Product 1", price: "₹10.00", originalPrice: "₹15.00",   image: product1},
+  { id: 2, name: "Product 2", price: "₹89.99", originalPrice: "₹99.99",   image: product2},
+  { id: 3, name: "Product 3", price: "₹79.99", originalPrice: "₹89.99",   image: product3},
+  { id: 4, name: "Product 4", price: "₹169.99", originalPrice: "₹279.99", image: product4},
+  { id: 5, name: "Product 5", price: "₹100",    originalPrice: "₹250",    image: product5},
+  { id: 6, name: "Product 6", price: "₹100",   originalPrice: "₹200",     image: product6},
+  { id: 7, name: "Product 7", price: "₹250",   originalPrice: "₹400",     image: product7},
+  { id: 8, name: "Product 8", price: "₹150",   originalPrice: "₹200",     image: product8},
 ];
 
 const Products = () => {
