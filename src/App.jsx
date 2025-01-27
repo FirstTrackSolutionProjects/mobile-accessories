@@ -7,7 +7,7 @@ import Products from "./components/Products";
 import SpecialOffers from "./components/SpecialOffers";
 import Categories from "./components/Categories";
 import MobileAccessories from "./components/MobileAccessories";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer2";
 
 import LoginPage from "./pages/LoginPage"; 
 import RegisterPage from "./pages/RegisterPage"; 

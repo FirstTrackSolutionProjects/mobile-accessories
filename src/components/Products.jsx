@@ -5,21 +5,20 @@ import product2 from "../assets/product2.jpg";
 import product3 from "../assets/product3.jpg";
 import product4 from "../assets/product4.jpg";
 import product5 from "../assets/product5.jpg";
-import product6 from "../assets/product5.jpg";
-import product7 from "../assets/product5.jpg";
-import product8 from "../assets/product5.jpg";
-import product9 from "../assets/product5.jpg";
+import product6 from "../assets/product6.jpg";
+import product7 from "../assets/product7.jpg";
+import product8 from "../assets/product8.jpg";
+
 
 const products = [
-  { id: 1, name: "Box Mishri", price: "₹10.00", originalPrice: "₹15.00", image: product1, store: "PotLood" },
-  { id: 2, name: "Product 2", price: "₹89.99", originalPrice: "₹99.99", image: product2, store: "Store A" },
-  { id: 3, name: "Product 3", price: "₹79.99", originalPrice: "₹89.99", image: product3, store: "Store B" },
-  { id: 4, name: "Product 4", price: "₹69.99", originalPrice: "₹79.99", image: product4, store: "Store C" },
-  { id: 5, name: "Product 5", price: "₹59.99", originalPrice: "₹69.99", image: product5, store: "Store D" },
-  { id: 6, name: "Product 6", price: "₹59.99", originalPrice: "₹69.99", image: product6, store: "Store E" },
-  { id: 7, name: "Product 7", price: "₹59.99", originalPrice: "₹69.99", image: product7, store: "Store F" },
-  { id: 8, name: "Product 8", price: "₹59.99", originalPrice: "₹69.99", image: product8, store: "Store G" },
-  { id: 9, name: "Product 9", price: "₹59.99", originalPrice: "₹69.99", image: product9, store: "Store H" },
+  { id: 1, name: "Product 1", price: "₹10.00", originalPrice: "₹15.00", image: product1},
+  { id: 2, name: "Product 2", price: "₹89.99", originalPrice: "₹99.99", image: product2},
+  { id: 3, name: "Product 3", price: "₹79.99", originalPrice: "₹89.99", image: product3},
+  { id: 4, name: "Product 4", price: "₹69.99", originalPrice: "₹79.99", image: product4},
+  { id: 5, name: "Product 5", price: "₹59.99", originalPrice: "₹69.99", image: product5},
+  { id: 6, name: "Product 6", price: "₹59.99", originalPrice: "₹69.99", image: product6},
+  { id: 7, name: "Product 7", price: "₹59.99", originalPrice: "₹69.99", image: product7},
+  { id: 8, name: "Product 8", price: "₹59.99", originalPrice: "₹69.99", image: product8},
 ];
 
 const Products = () => {
@@ -38,7 +37,7 @@ const Products = () => {
             </p>
            
             <button className="add-to-cart">ADD TO CART</button>
-            <p className="store">Store: <span>{product.store}</span></p>
+            {/* <p className="store">Store: <span>{product.store}</span></p> */}
           </div>
         ))}
       </div>

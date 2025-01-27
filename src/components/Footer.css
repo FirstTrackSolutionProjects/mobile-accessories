@@ -6,7 +6,7 @@
   
 .footer-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
   
@@ -26,7 +26,9 @@
   
 .footer-links {
     display: flex;
-    gap: 2rem;
+    flex-direction: column;
+    padding: 0 24px;
+    
 }
   
 .footer-links div {
@@ -54,18 +56,19 @@
     max-width: 300px;
 }
   
-    .social-icons {
+.social-icons {
     display: flex;
     gap: 1rem;
 }
   
-    .social-icons a {
+.social-icons a {
     text-decoration: none;
     color: white;
     font-size: 0.9rem;
+    flex-direction:column;
 }
   
-    .footer-bottom {
+.footer-bottom {
     text-align: center;
     margin-top: 2rem;
     font-size: 0.8rem;

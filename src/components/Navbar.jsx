@@ -26,6 +26,7 @@ function Navbar() {
         <a href="#">Products</a>
         <a href="#">About Us</a>
         <a href="#">Contact</a>
+        <a href="#">LogIn</a>
       </div>
 
       <div className="navbar-icons">
@@ -33,9 +34,9 @@ function Navbar() {
           <FaShoppingCart />
           <span className="cart-count">0</span>
         </a>
-        <a href="#" className="login">
+        {/* <a href="#" className="login">
           <FaUser />
-        </a>
+        </a> */}
       </div>
 
       <button className="navbar-toggle" onClick={toggleMenu}>

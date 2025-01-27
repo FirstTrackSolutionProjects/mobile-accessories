@@ -27,8 +27,6 @@ const Accessories = () => {
     { id: 8, name: "USB cords", image: usbcordImg, path: "/USBcords" },
     { id: 9, name: "memory chips", image: memorychipsImg, path: "/memorychips" },
     { id: 10, name: "ear phones", image: earphonesImg, path: "/earphones" },
-  //   { id: 10, name: "ear phones", image: earphonesImg, path: "/earphones" },
-  //   { id: 10, name: "ear phones", image: earphonesImg, path: "/earphones" },
   ];
 
   return (

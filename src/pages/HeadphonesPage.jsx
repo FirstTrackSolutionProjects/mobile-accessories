@@ -4,20 +4,51 @@ const HeadphonesPage = () => {
   const headphones = [
     {
       id: 1,
-      name: "Wireless Headphone A",
+      name: "Noise Airwave Max 4 Wireless Over-Ear",
       image: "/assets/headphone1.jpg",
-      price: "$99",
+      OriginalPrice: "$2499",
+      OfferPrice: "859",
     },
     {
       id: 2,
-      name: "Noise Cancelling Headphone B",
+      name: "Stereo Headphones - BASS 2.0 ",
       image: "/assets/headphone2.jpg",
       price: "$149",
     },
     {
       id: 3,
-      name: "Gaming Headphone C",
+      name: "Apple AirPods Max Wireless Over-Ear",
       image: "/assets/headphone3.jpg",
+      price: "$129",
+    },
+    {
+      id: 4,
+      name: "m360 Synergy HD Active Noise Cancelling Wireless",
+      image: "/assets/headphone4.jpg",
+      price: "$129",
+    },
+    {
+      id: 5,
+      name: "PTron Studio High Bass Over The Ear Bluetooth",
+      image: "/assets/headphone5.jpg",
+      price: "$129",
+    },
+    {
+      id: 6,
+      name: "Hp wired on ear headphones with mic",
+      image: "/assets/headphone6.jpg",
+      price: "$129",
+    },
+    {
+      id: 7,
+      name: "Edifier G2 II 7.1 Surround Sound Gaming Headset",
+      image: "/assets/headphone7.jpg",
+      price: "$129",
+    },
+    {
+      id: 8,
+      name: "Philips TAH8506BK wireless headphones",
+      image: "/assets/headphone8.jpg",
       price: "$129",
     },
   ];
