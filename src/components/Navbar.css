@@ -11,8 +11,10 @@
 .navbar-logo img.logo {
   height: 50px;
   width: auto;
+  background-color: transparent;
+  font-size: 30px;
+ 
 }
-
 .navbar-search {
   display: flex;
   align-items: center;
@@ -22,20 +24,22 @@
 
 .navbar-search input {
   width: 100%;
+  border: 1.5px solid black;
+  background: transparent;
+  font-size: 16px;
+  color: #0e0d0d;
   padding: 5px 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px 0 0 4px;
-  outline: none;
+  border-radius: 5px;
 }
 
-.navbar-search button {
+/* .navbar-search button {
   padding: 5px 15px;
   border: none;
   background-color: #333;
   color: white;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
-}
+} */
 
 .navbar-links {
   display: flex;

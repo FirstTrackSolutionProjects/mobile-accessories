@@ -8,7 +8,14 @@ import SpecialOffers from "./components/SpecialOffers";
 import Categories from "./components/Categories";
 import MobileAccessories from "./components/MobileAccessories";
 import Footer from "./components/Footer2";
-
+import ContactPage from "./components/Contact";
+import About from "./components/About";
+import Home from "./components/Home";
+import Category from "./components/Category";
+import Shipping from "./components/Shipping";
+import Returns from "./components/Return";
+import Terms from "./components/Term";
+import Privacy from "./components/Privacy";
 import LoginPage from "./pages/LoginPage"; 
 import RegisterPage from "./pages/RegisterPage"; 
 import HeadphonesPage from "./pages/HeadphonesPage";
@@ -26,8 +33,8 @@ const App = () => {
     <Router>
       <Navbar /> 
       <Routes>
-        
-        <Route
+     
+         <Route
           path="/"
           element={
             <>
@@ -37,7 +44,10 @@ const App = () => {
               <SpecialOffers />
               <Categories />
               <MobileAccessories />
-              <Footer />
+             
+              <Footer /> 
+
+              
             </>
           }
         />

@@ -13,7 +13,7 @@ const Footer = () => {
         <div className='relative flex flex-col justify-center items-center sm:items-start'>
               <div className=' text-left text-4xl text-white  font-bold italic'>MOBILE ACCESSORIES</div>
               <div className='flex items-center my-3'>
-                {/* <img src="/logo.webp" alt="" className='w-[100px] h-[30px]' /> */}
+                {/* <img src="/logo.jpg" alt="" className='w-[100px] h-[30px]' /> */}
                 <div className='text-[37px] font-bold -ml-8 -mt-2 text-blue-400 italic'>WORLD</div>
               </div>
         </div>
@@ -30,7 +30,6 @@ const Footer = () => {
             <Link to='/category'><div>Category</div></Link>
             <Link to='/about'><div>About</div></Link>
             <Link to='/contact'><div>Contact</div></Link>
-            {/* <Link to='/support'><div>Support</div></Link> */}
             </div>
         </div>
       </div>
@@ -45,18 +44,15 @@ const Footer = () => {
             </div>
         </div>
         <div className='w-[300px] space-y-3 flex flex-col justify-center '>
-        <div className='font-medium text-xl'>Follow Us</div>
-            {/* <div>Get business news , tip and solutions to your problems our experts.</div>
-            <form action="" className='flex flex-col mx-4 space-y-4'>
-                <input type="email" name='email' placeholder='E-mail address' className='py-2 px-4 rounded-xl' />
-                <button className='border px-4 py-2 rounded-xl'>Subscribe</button>
-            </form> */}
-             <Link to="/facebook"> <FaFacebook size={20} /></Link>
-             <Link to="/twitter"> <FaTwitter size={20} /></Link>
-             <Link to="/instagram"> <FaInstagram size={20} /></Link>
-             <Link to="/linkedin"> <FaLinkedin size={20} /></Link>
-        </div>
-      </div>
+  <div className='font-medium text-xl'>Follow Us</div>
+  <div className="footer-icons flex flex-row items-center space-x-4">
+    <Link to="/facebook"><FaFacebook size={20} /></Link>
+    <Link to="/twitter"><FaTwitter size={20} /></Link>
+    <Link to="/instagram"><FaInstagram size={20} /></Link>
+    <Link to="/linkedin"><FaLinkedin size={20} /></Link>
+  </div>
+</div>
+</div>
     </div>
     <div className='bg-black text-white w-full flex flex-col sm:flex-row justify-center items-center text-xs sm:text-md md:text-lg text-center py-3'>
       Copyright @ 2024, Developed by &nbsp; <p><a href="https://firsttracksolution.tech">First Track Solution Technologies</a></p>

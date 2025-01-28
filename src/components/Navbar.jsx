@@ -18,16 +18,17 @@ function Navbar() {
 
       <div className="navbar-search">
         <input type="text" placeholder="Search products..." />
-        <button>Search</button>
+        {/* <button>Search</button> */}
       </div>
 
       <div className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
-        <a href="#">Home</a>
-        <a href="#">Products</a>
+        {/* <a href="#">Home</a>
+        <a href="#">Categories</a>
+        <a href="#">My Orders</a>
+        <a href="#">Refer & Earn</a>
         <a href="#">About Us</a>
-        <a href="#">Contact</a>
-        <a href="#">LogIn</a>
-      </div>
+        <a href="#">Contact</a> */}
+       </div>
 
       <div className="navbar-icons">
         <a href="#" className="cart">
