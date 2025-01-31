@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import logo from "../assets/logo.jpg";
-import { FaShoppingCart, FaUser, FaBars } from 'react-icons/fa';
+import { FaShoppingCart, FaUser, FaBars, FaSearch } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const [searchQuery, setSearchQuery] = useState("");
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -17,27 +18,32 @@ function Navbar() {
       </div>
 
       <div className="navbar-search">
-        <input type="text" placeholder="Search products..." />
-        {/* <button>Search</button> */}
+      <FaSearch className="search-icon" />
+        <input
+          type="text"
+          placeholder="Search for products"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
       </div>
 
       <div className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
-        {/* <a href="#">Home</a>
-        <a href="#">Categories</a>
-        <a href="#">My Orders</a>
-        <a href="#">Refer & Earn</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact</a> */}
+        <Link to="/">Home</Link>
+        <Link to="/category">Category</Link>
+        <Link to="/order">My Orders</Link>
+        <Link to="/refer">Refer & Earn</Link>
+        <Link to="/partner">Partner</Link>
+        <Link to="/about">About Us</Link>
        </div>
 
       <div className="navbar-icons">
-        <a href="#" className="cart">
+        <Link to="/cart">
           <FaShoppingCart />
           <span className="cart-count">0</span>
-        </a>
-        {/* <a href="#" className="login">
+        </Link>
+        <Link to="/login">
           <FaUser />
-        </a> */}
+        </Link>
       </div>
 
       <button className="navbar-toggle" onClick={toggleMenu}>

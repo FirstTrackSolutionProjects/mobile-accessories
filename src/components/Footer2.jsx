@@ -26,7 +26,7 @@ const Footer = () => {
 
             <div>
             <div className='font-medium text-xl mb-3'>Quick Links</div>
-            <Link to='/home'><div>Home</div></Link>
+            <Link to='/'><div>Home</div></Link>
             <Link to='/category'><div>Category</div></Link>
             <Link to='/about'><div>About</div></Link>
             <Link to='/contact'><div>Contact</div></Link>
@@ -37,10 +37,10 @@ const Footer = () => {
         <div className='w-[300px] xl:w-[200px] flex flex-col  '>
             <div>
         <div className='font-medium text-xl mb-4'>Customer Service</div>
-            <Link to='/shipping'><div>Shipping & Delivery Policy</div></Link>
-            <Link to={'/return'}><div>Returns & Refunds</div></Link>
-            <Link to={'/term'}><div>Terms & Conditions</div> </Link>
-            <Link to="/privacy"><div>Privacy & Policy</div></Link>
+            <Link to='/shipping'><div>Shipping and Delivery Policy</div></Link>
+            <Link to={'/return'}><div>Returns and Refunds</div></Link>
+            <Link to={'/term'}><div>Terms and Conditions</div> </Link>
+            <Link to="/privacy"><div>Privacy and Policy</div></Link>
             </div>
         </div>
         <div className='w-[300px] space-y-3 flex flex-col justify-center '>
