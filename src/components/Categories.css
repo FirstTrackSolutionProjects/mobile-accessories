@@ -1,52 +1,59 @@
+
 .categories-section {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    height: 800px;
+    display: flex;                  
+    overflow-x: auto;              
+    gap: 10px;                     
+    padding: 10px;                  
+    scrollbar-width: thin;          
 }
 
 .category-item {
-    width: 100%; 
-    text-align: center;
-    padding: 50px 0;
-    color: #333;
-    font-family: "Arial", sans-serif;
-}
-
-.Headphones-bg {
-    background: linear-gradient(to right, #fefcea, #e3d991); 
-}
-.Earbuds-bg {
-    background: linear-gradient(to right, #e3ffe7, #d9e7ff);
-}
-.accessories-bg {
-    background: linear-gradient(to right, #fff1eb, #ace0f9); 
-}
-.powerbanks-bg {
-    background: linear-gradient(to right, #dae361, #ace0f9); 
-}
-.BackCovers-bg {
-    background: linear-gradient(to right, #f7a1f7, #dbe393); 
-}
-.TemperGlass-bg {
-    background: linear-gradient(to right, #91ebee, #e8b280); 
+    padding: 20px;                 
+    border-radius: 8px;             
+    color: #fff;                    
+    text-align: center;            
+    transition: background-color 0.3s ease; 
+    flex-shrink: 0;                
 }
 
 .category-item h2 {
-    font-size: 2rem;
     margin: 0;
 }
 
-
-/* .garments-bg {
-    background: url('../assets/garments-bg.jpg') no-repeat center center / cover;
+.category-item:hover {
+    background-color: rgba(0, 0, 0, 0.7); 
 }
 
-.footwear-bg {
-    background: url('../assets/footwear-bg.jpg') no-repeat center center / cover;
+.Headphones-bg {
+    background-color: #4CAF50;
 }
 
-.accessories-bg {
-    background: url('../assets/accessories-bg.jpg') no-repeat center center / cover;
-} */
+.Earphones-bg {
+    background-color: #2196F3;
+}
 
+.Covers-bg {
+    background-color: #FF9800;
+}
+
+.Powerbanks-bg {
+    background-color: #9C27B0;
+}
+.TemperGlass-bg {
+    background-color: #009688;
+}
+.Chargers-bg {
+    background-color: #607D8B;
+}
+
+.Memorychip-bg {
+    background-color: #795548;
+}
+
+.Usbcord-bg {
+    background-color: #FFC107;
+}
+
+.Mobilelens-bg {
+    background-color: #FF5722;
+}

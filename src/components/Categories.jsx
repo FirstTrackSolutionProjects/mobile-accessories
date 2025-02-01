@@ -4,11 +4,14 @@ import "./Categories.css";
 const Categories = () => {
    const categories = [
         { id: 1, name: "Headphones", bgClass: "Headphones-bg" },
-        { id: 2, name: "Earbuds", bgClass: "Earbuds-bg" },
-        { id: 3, name: "Accessories", bgClass: "accessories-bg" },
-        { id: 4, name: "Power Banks", bgClass: "powerbanks-bg" },
-        { id: 5, name: "BackCovers", bgClass: "BackCovers-bg" },
-        { id: 6, name: "TemperGlass", bgClass: "TemperGlass-bg" },
+        { id: 2, name: "Earphones", bgClass: "Earphones-bg" },
+        { id: 3, name: "Covers", bgClass: "Covers-bg" },
+        { id: 4, name: "Power Banks", bgClass: "Powerbanks-bg" },
+       { id: 5, name: "TemperGlass", bgClass: "TemperGlass-bg" },
+        { id: 6, name: "Chargers", bgClass: "Chargers-bg" },
+        { id: 7, name: "Memorychip", bgClass: "Memorychip-bg" },
+        { id: 8, name: "Usbcord", bgClass: "Usbcord-bg" },
+        { id: 9, name: "mobilelens", bgClass: "Mobilelens-bg" },
     ];
 
     return (

@@ -1,44 +1,37 @@
-// import React, { useState } from 'react';
+// import React, { useState } from "react";
+// import { FaTimes, FaBars } from "react-icons/fa";
+// import { Link } from "react-router-dom";
 
-// const SidebarNavigation = () => {
-//     const [activePage, setActivePage] = useState('home');
+// const Sidebar = () => {
+//   const [isOpen, setIsOpen] = useState(false);
 
-//     const pages = {
-//         home: 'Welcome to the Home Page!',
-//         allProducts: 'Here are all the products we offer.',
-//         myOrders: 'View your orders here.',
-//         referEarn: 'Refer your friends and earn rewards!',
-//         partner: 'Learn more about partnership opportunities.',
-//         aboutUs: 'About Us: Learn more about our company.',
-//     };
+//   return (
+//     <>
+//       <button className="p-3 text-green-600" onClick={() => setIsOpen(!isOpen)}>
+//         <FaBars size={24} />
+//       </button>
 
-//     return (
-//         <div style={{ display: 'flex', height: '100vh' }}>
-//             <div style={{ width: '250px', backgroundColor: '#f9f9f9', borderRight: '1px solid #ddd', padding: '20px', boxSizing: 'border-box' }}>
-//                 <nav>
-//                     <a href="#" onClick={() => setActivePage('home')} style={linkStyle}>Home</a>
-//                     <a href="#" onClick={() => setActivePage('allProducts')} style={linkStyle}>All Products</a>
-//                     <a href="#" onClick={() => setActivePage('myOrders')} style={linkStyle}>My Orders</a>
-//                     <a href="#" onClick={() => setActivePage('referEarn')} style={linkStyle}>Refer & Earn</a>
-//                     <a href="#" onClick={() => setActivePage('partner')} style={linkStyle}>Partner</a>
-//                     <a href="#" onClick={() => setActivePage('aboutUs')} style={linkStyle}>About Us</a>
-//                 </nav>
-//             </div>
-//             <div style={{ flex: 1, padding: '20px' }}>
-//                 <div>{pages[activePage]}</div>
-//             </div>
+//       {isOpen && (
+//         <div className="fixed inset-0 bg-white w-64 p-5 shadow-lg z-50">
+//           <button className="absolute top-4 right-4 text-gray-600" onClick={() => setIsOpen(false)}>
+//             <FaTimes size={24} />
+//           </button>
+
+//           <nav className="flex flex-col gap-4 text-green-600">
+//             <Link to="/" className="hover:text-green-800">Home</Link>
+//             <Link to="/category" className="hover:text-green-800">Category</Link>
+//             <Link to="/order" className="hover:text-green-800">My Orders</Link>
+//             <Link to="/refer" className="hover:text-green-800">Refer & Earn</Link>
+
+//             <div className="mt-4 font-bold">Partner</div>
+//             <Link to="/upload" className="ml-4 hover:text-green-800">Upload Catalog</Link>
+
+//             <Link to="/about" className="mt-4 hover:text-green-800">About Us</Link>
+//           </nav>
 //         </div>
-//     );
+//       )}
+//     </>
+//   );
 // };
 
-// const linkStyle = {
-//     display: 'block',
-//     textDecoration: 'none',
-//     color: '#28a745',
-//     fontSize: '16px',
-//     margin: '10px 0',
-//     transition: 'color 0.3s',
-//     cursor: 'pointer',
-// };
-
-// export default SidebarNavigation;
+// export default Sidebar;

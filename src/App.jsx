@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar"; 
 import Order from "./components/Order";
 import Refer from "./components/Refer";
-import Partner from "./components/partner";
+import Partner from "./components/Partner";
 
 import Accessories from "./components/Accessories"; 
 import Slideshow from "./components/Slideshow";
@@ -62,6 +62,7 @@ const App = () => {
         <Route path="/refer" element={<Refer />} />
         <Route path="/partner" element={<Partner />} />
 
+       
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/headphones" element={<HeadphonesPage />} />
