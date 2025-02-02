@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Navbar.css';
 import logo from "../assets/logo.jpg";
 import { FaShoppingCart, FaUser, FaBars, FaSearch, FaChevronDown } from 'react-icons/fa';
+import { IoMdClose } from "react-icons/io";
 import { Link } from 'react-router-dom';
 
 function Navbar() {
@@ -35,11 +36,11 @@ function Navbar() {
         <Link to="/">Home</Link>
 
         {/* Category Dropdown */}
-        <div className={`dropdown ${isCategoryOpen ? 'open' : ''}`}>
+        <div className={`dropdown space-x-1 ${isCategoryOpen ? 'open' : ''}`}>
           <Link to="/category" className="category-link">Category</Link>
-          <button className="dropdown-toggle" onClick={toggleCategoryDropdown}>
+          <div className="dropdown-toggle" onClick={toggleCategoryDropdown}>
             <FaChevronDown />
-          </button>
+          </div>
           {isCategoryOpen && (
             <div className="dropdown-menu">
               <Link to="/category/headphones">Headphones</Link>
@@ -59,7 +60,7 @@ function Navbar() {
         <Link to="/refer">Refer & Earn</Link>
 
         {/* Partner Dropdown */}
-        <div className={`dropdown ${isPartnerOpen ? 'open' : ''}`}>
+        <div className={`dropdown space-x-1 ${isPartnerOpen ? 'open' : ''}`}>
           <Link to="/partner" className="partner-link">Partner</Link>
           <button className="dropdown-toggle" onClick={togglePartnerDropdown}>
             <FaChevronDown />
@@ -84,8 +85,8 @@ function Navbar() {
         </Link>
       </div>
 
-      <button className="navbar-toggle" onClick={toggleMenu}>
-        <FaBars />
+      <button className="navbar-toggle" onClick={toggleMenu }>
+        {isMenuOpen ? <IoMdClose />:<FaBars />}
       </button>
     </nav>
   );
