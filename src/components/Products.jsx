@@ -37,7 +37,6 @@ const Products = () => {
             </p>
            
             <button className="add-to-cart">ADD TO CART</button>
-            {/* <p className="store">Store: <span>{product.store}</span></p> */}
           </div>
         ))}
       </div>

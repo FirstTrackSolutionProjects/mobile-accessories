@@ -17,16 +17,15 @@ const Accessories = () => {
   const navigate = useNavigate();
 
   const accessories = [
-    { id: 1, name: "BestOffer", image: bestoffersImg, path: "/bestoffer" },
-    { id: 2, name: "Headphones", image: headphonesImg, path: "/headphones" },
-    { id: 3, name: "Chargers", image: chargersImg, path: "/chargers" },
-    { id: 4, name: "Covers", image: coversImg, path: "/covers" },
-    { id: 5, name: "Power Banks", image: powerbanksImg, path: "/powerbanks" },
-    { id: 6, name: "Temper Glass", image: temperglassImg, path: "/temperglass" },
-    { id: 7, name: "Mobile lens", image: mobilelensImg, path: "/mobilelens" },
-    { id: 8, name: "USB cords", image: usbcordImg, path: "/USBcords" },
-    { id: 9, name: "memory chips", image: memorychipsImg, path: "/memorychips" },
-    { id: 10, name: "ear phones", image: earphonesImg, path: "/earphones" },
+    { id: 1, name: "Headphones", image: headphonesImg, path: "/headphones" },
+    { id: 2, name: "Chargers", image: chargersImg, path: "/chargers" },
+    { id: 3, name: "Covers", image: coversImg, path: "/covers" },
+    { id: 4, name: "Power Banks", image: powerbanksImg, path: "/powerbanks" },
+    { id: 5, name: "Temper Glass", image: temperglassImg, path: "/temperglass" },
+    { id: 6, name: "Mobile lens", image: mobilelensImg, path: "/mobilelens" },
+    { id: 7, name: "USB cords", image: usbcordImg, path: "/USBcords" },
+    { id: 8, name: "memory chips", image: memorychipsImg, path: "/memorychips" },
+    { id: 9, name: "ear phones", image: earphonesImg, path: "/earphones" },
   ];
 
   return (

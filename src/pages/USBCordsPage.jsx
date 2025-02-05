@@ -13,43 +13,50 @@ const UsbCordsPage = () => {
       id: 2,
       name: "USB Charging Cable USB Connector DC Power Cab",
       image: "/assets/usbcord2.jpg",
-      price: "$149",
+      OriginalPrice: "$2499",
+      OfferPrice: "859",
     },
     {
       id: 3,
       name: "RJ45 Double Sided USB Cord",
       image: "/assets/usbcord3.jpg",
-      price: "$129",
+      OriginalPrice: "$2499",
+      OfferPrice: "859",
     },
     {
       id: 4,
       name: "USB Cord(USB Cable,4 Pole Stereo To USB Male Cord,4",
       image: "/assets/usbcord4.jpg",
-      price: "$129",
+      OriginalPrice: "$2499",
+      OfferPrice: "859",
     },
     {
       id: 5,
       name: "usb memory card and a usb cord",
       image: "/assets/usbcord5.jpg",
-      price: "$129",
+      OriginalPrice: "$2499",
+      OfferPrice: "859",
     },
     {
       id: 6,
       name: "Magnetic Dock Charging USB Cord for All Honor Band Cables",
       image: "/assets/usbcord6.jpg",
-      price: "$129",
+      OriginalPrice: "$2499",
+      OfferPrice: "859",
     },
     {
       id: 7,
       name: "Voltegic Micro USB Cable 1 m Copper Braiding, Metal",
       image: "/assets/usbcord7.jpg",
-      price: "$129",
+      OriginalPrice: "$2499",
+      OfferPrice: "859",
     },
     {
       id: 8,
       name: "USB Cord(USB Cable,4 Pole Stereo To USB Male Cord",
       image: "/assets/usbcord8.jpg",
-      price: "$129",
+      OriginalPrice: "$2499",
+      OfferPrice: "859",
     },
   ];
 
@@ -67,9 +74,14 @@ const UsbCordsPage = () => {
               alt={usbcord.name}
               className="w-full h-40 object-cover"
             />
-            <div className="p-4">
+             <div className="mt-4">
               <h2 className="text-lg font-semibold">{usbcord.name}</h2>
-              <p className="text-gray-600">{usbcord.price}</p>
+              <p className="text-gray-400 line-through">{usbcord.OriginalPrice}</p>
+              <p className="text-red-500 text-xl font-bold">{usbcord.OfferPrice}</p>
+              <div className="mt-4 flex gap-2">
+              <button className="bg-blue-500 text-white px-4 py-2 rounded  cursor-pointer">Add to Cart</button>
+              <button className="bg-green-500 text-white px-4 py-2 rounded  cursor-pointer">Buy Now</button>
+            </div>
             </div>
           </div>
         ))}

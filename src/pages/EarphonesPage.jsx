@@ -13,43 +13,50 @@ const EarphonesPage = () => {
       id: 2,
       name: "Original Vivo iQOO Earphone",
       image: "/assets/earphone2.jpg",
-      price: "$149",
+      OriginalPrice: "$2499",
+      OfferPrice: "859",
     },
     {
       id: 3,
       name: "Apple Mobile Earphone",
       image: "/assets/earphone3.jpg",
-      price: "$129",
+      OriginalPrice: "$2499",
+      OfferPrice: "859",
     },
     {
       id: 4,
       name: "Portronics Wired Earphones and Wired",
       image: "/assets/earphone4.jpg",
-      price: "$129",
+      OriginalPrice: "$2499",
+      OfferPrice: "859",
     },
     {
       id: 5,
       name: "U&I Medal series Ui-378 Champ Mobile Earphone",
       image: "/assets/earphone5.jpg",
-      price: "$129",
+      OriginalPrice: "$2499",
+      OfferPrice: "859",
     },
     {
       id: 6,
       name: "Samsung Type-C Earphones black",
       image: "/assets/earphone6.jpg",
-      price: "$129",
+      OriginalPrice: "$2499",
+      OfferPrice: "859",
     },
     {
       id: 7,
       name: "Earphone for T-Mobile REVVL 4 Plus ",
       image: "/assets/earphone7.jpg",
-      price: "$129",
+      OriginalPrice: "$2499",
+      OfferPrice: "859",
     },
     {
       id: 8,
       name: "Usb C Earphone with Type-C Plug",
       image: "/assets/earphone8.jpg",
-      price: "$129",
+      OriginalPrice: "$2499",
+      OfferPrice: "859",
     },
   ];
 
@@ -67,9 +74,14 @@ const EarphonesPage = () => {
               alt={earphone.name}
               className="w-full h-40 object-cover"
             />
-            <div className="p-4">
+           <div className="mt-4">
               <h2 className="text-lg font-semibold">{earphone.name}</h2>
-              <p className="text-gray-600">{earphone.price}</p>
+              <p className="text-gray-400 line-through">{earphone.OriginalPrice}</p>
+              <p className="text-red-500 text-xl font-bold">{earphone.OfferPrice}</p>
+              <div className="mt-4 flex gap-2">
+              <button className="bg-blue-500 text-white px-4 py-2 rounded  cursor-pointer">Add to Cart</button>
+              <button className="bg-green-500 text-white px-4 py-2 rounded  cursor-pointer">Buy Now</button>
+            </div>
             </div>
           </div>
         ))}

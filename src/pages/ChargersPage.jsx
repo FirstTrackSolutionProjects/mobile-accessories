@@ -13,43 +13,50 @@ const ChargersPage = () => {
       id: 2,
       name: "HONOR SuperCharge 35W Single Port USB Type-A",
       image: "/assets/charger2.jpg",
-      price: "$149",
+      OriginalPrice: "$2499",
+      OfferPrice: "859",
     },
     {
       id: 3,
       name: "Zest Charger - GaN 100W",
       image: "/assets/charger3.jpg",
-      price: "$129",
+      OriginalPrice: "$2499",
+      OfferPrice: "859",
     },
     {
       id: 4,
       name: "DC Port Charger",
       image: "/assets/charger4.jpg",
-      price: "$129",
+      OriginalPrice: "$2499",
+      OfferPrice: "859",
     },
     {
       id: 5,
       name: "boAt 18W Power WCD QC3A Charger",
       image: "/assets/charger5.jpg",
-      price: "$129",
+      OriginalPrice: "$2499",
+      OfferPrice: "859",
     },
     {
       id: 6,
       name: "Maquter Fast Charger For Nokia ",
       image: "/assets/charger6.jpg",
-      price: "$129",
+      OriginalPrice: "$2499",
+      OfferPrice: "859",
     },
     {
       id: 7,
       name: "Samsung Galaxy S20 FE Type C Adaptive Fast Mobile Charger",
       image: "/assets/charger7.jpg",
-      price: "$129",
+      OriginalPrice: "$2499",
+      OfferPrice: "859",
     },
     {
       id: 8,
       name: "Apple iPhone 5W Mobile Charger",
       image: "/assets/charger8.jpg",
-      price: "$129",
+      OriginalPrice: "$2499",
+      OfferPrice: "859",
     },
   ];
 
@@ -67,9 +74,14 @@ const ChargersPage = () => {
               alt={charger.name}
               className="w-full h-40 object-cover"
             />
-            <div className="p-4">
+            <div className="mt-4">
               <h2 className="text-lg font-semibold">{charger.name}</h2>
-              <p className="text-gray-600">{charger.price}</p>
+              <p className="text-gray-400 line-through">{charger.OriginalPrice}</p>
+              <p className="text-red-500 text-xl font-bold">{charger.OfferPrice}</p>
+              <div className="mt-4 flex gap-2">
+              <button className="bg-blue-500 text-white px-4 py-2 rounded  cursor-pointer">Add to Cart</button>
+              <button className="bg-green-500 text-white px-4 py-2 rounded  cursor-pointer">Buy Now</button>
+            </div>
             </div>
           </div>
         ))}
