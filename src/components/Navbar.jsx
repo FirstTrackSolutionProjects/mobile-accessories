@@ -24,21 +24,6 @@ function Navbar() {
         <img src={logo} alt="Logo" className="h-20 w-auto" />
       </Link>
 
-     
-      <div className="relative md:flex items-center  w-80">
-      <input
-        type="text"
-        placeholder="Search for products"
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-        className="w-full pl-10 pr-4 py-2 border border-gray-500 rounded-full shadow-sm focus:outline-none "
-  />
-  <button className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600">
-    <FaSearch className="text-lg" />
-  </button>
-      </div>
-
-      {/* Icons */}
       <div className="flex items-center space-x-6">
         <Link to="/cart" className="relative">
           <FaShoppingCart className="text-white hover:text-yellow-400 text-xl" />
@@ -64,34 +49,38 @@ function Navbar() {
           </div>
 
           <nav className="flex flex-col space-y-6 p-6 text-lg">
-            <Link to="/" className="hover:text-green-400" onClick={toggleMenu}>Home</Link>
+            <Link to="/" className="hover:text-yellow-400" onClick={toggleMenu}>Home</Link>
             <div>
               <button
                 onClick={() => toggleDropdown("category")}
-                className="flex items-center justify-between w-full hover:text-black"
+                className="flex items-center justify-between w-full hover:text-yellow-400"
               >
                 category {activeDropdown === "category" ? <FaChevronUp /> : <FaChevronDown />}
               </button>
               {activeDropdown === "category" && (
-                <div className="pl-4 mt-2 space-y-2 text-sm">
-                  <Link to="/category/apartments" onClick={toggleMenu}>Apartment</Link>
-                  <Link to="/category/cottage" onClick={toggleMenu}>Cottage</Link>
-                  <Link to="/category/bungalow" onClick={toggleMenu}>Bungalow</Link>
-                  <Link to="/category/simplex" onClick={toggleMenu}>Simplex</Link>
-                  <Link to="/category/duplex" onClick={toggleMenu}>Duplex</Link>
+                <div className="pl-4 mt-2 flex flex-col space-y-2 text-sm">
+                  <Link to="/category/headphones" onClick={toggleMenu}>Headphones</Link>
+                  <Link to="/category/charger" onClick={toggleMenu}>Charger</Link>
+                  <Link to="/category/cover" onClick={toggleMenu}>Cover</Link>
+                  <Link to="/category/earphone" onClick={toggleMenu}>Earphone</Link>
+                  <Link to="/category/powerbank" onClick={toggleMenu}>Powerbank</Link>
+                  <Link to="/category/temperglass" onClick={toggleMenu}>Temperglass</Link>
+                  <Link to="/category/memorychips" onClick={toggleMenu}>Memorychips</Link>
+                  <Link to="/category/mobilelens" onClick={toggleMenu}>Mobilelens</Link>
+                  <Link to="/category/usbcord" onClick={toggleMenu}>Usbcord</Link>
                 </div>
               )}
             </div>
-            <Link to="/order" className="hover:text-green-400" onClick={toggleMenu}>My Orders</Link>
-            <Link to="/refer" className="hover:text-green-400" onClick={toggleMenu}>Refer & Earn</Link>
-            <Link to="/about" className="hover:text-green-400" onClick={toggleMenu}>About Us</Link>
+            <Link to="/order" className="hover:text-yellow-400" onClick={toggleMenu}>My Orders</Link>
+            <Link to="/refer" className="hover:text-yellow-400" onClick={toggleMenu}>Refer & Earn</Link>
+            <Link to="/about" className="hover:text-yellow-400" onClick={toggleMenu}>About Us</Link>
 
           
 
             <div>
               <button
                 onClick={() => toggleDropdown("partner")}
-                className="flex items-center justify-between w-full hover:text-black"
+                className="flex items-center justify-between w-full hover:text-yellow-400"
               >
                 partner {activeDropdown === "partner" ? <FaChevronUp /> : <FaChevronDown />}
               </button>
@@ -110,3 +99,4 @@ function Navbar() {
 }
 
 export default Navbar;
+

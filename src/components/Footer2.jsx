@@ -27,7 +27,6 @@ const Footer = () => {
             <div>
             <div className='font-medium text-xl mb-3'>Quick Links</div>
             <Link to='/'><div>Home</div></Link>
-            <Link to='/category'><div>Category</div></Link>
             <Link to='/about'><div>About</div></Link>
             <Link to='/contact'><div>Contact</div></Link>
             </div>

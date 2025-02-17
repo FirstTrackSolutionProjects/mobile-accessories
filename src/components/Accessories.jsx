@@ -15,13 +15,14 @@ const images = [
 const Accessories = () => {
   return (
     <div className="p-6 bg-gray-100">
-      <div className="flex space-x-4 overflow-x-auto  scrollbar-hide p-4">
+      <div className="flex space-x-4 overflow-x-auto scrollbar-hide p-4">
         {images.map((src, index) => (
-          <div
-            key={index}
-            className="flex-shrink-0 w-30 h-30   rounded-full overflow-hidden border-4 border-gray-300"
-          >
-            <img src={src} alt={`Item ${index}`} className="w-full h-full object-cover" />
+          <div key={index} className="flex-shrink-0 rounded-full">
+            <div className="w-32 h-32 rounded-full bg-white p-2 flex items-center justify-center shadow-lg">
+              <div className="w-24 h-20 rounded-full overflow-hidden">
+                <img src={src} alt={`Item ${index}`} className="w-full h-full object-cover" />
+              </div>
+            </div>
           </div>
         ))}
       </div>
@@ -30,3 +31,4 @@ const Accessories = () => {
 };
 
 export default Accessories;
+

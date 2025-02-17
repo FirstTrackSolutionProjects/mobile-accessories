@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar"; 
+import Navbar from "./components/Navbar";
+import SearchBar from "./components/Searchbar"; 
 import Order from "./components/Order";
 import Refer from "./components/Refer";
 import Partner from "./components/Partner";
@@ -12,7 +13,7 @@ import MobileAccessories from "./components/MobileAccessories";
 import Footer from "./components/Footer2";
 import Contact from "./components/Contact";
 import About from "./components/About";
-import Category from "./components/Category";
+
 import Shipping from "./components/Shipping";
 import Returns from "./components/Return";
 import Terms from "./components/Term";
@@ -39,7 +40,7 @@ const App = () => {
           path="/"
           element={
             <>
-              
+              <SearchBar/>
               <Accessories />
               <Slideshow />
               <Products />
@@ -70,15 +71,8 @@ const App = () => {
         <Route path="/mobilelens" element={<MobileLenspage />} />
         <Route path="/USBcords" element={<USBCordsPage />} />
         <Route path="/memorychips" element={<MemoryChipsPage />} />
-        <Route path="/earphones" element={<EarphonesPage />} />
-
-        <Route path="/category" 
-        element={
-        <> 
-        <Category/>
-        </>
-        }
-        />    
+        <Route path="/earphones" element={<EarphonesPage />} />   
+         
           <Route path="/About" 
           element={
             <> <About/>

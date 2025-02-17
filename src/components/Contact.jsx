@@ -2,22 +2,30 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div style={{ textAlign: "center", padding: "20px" }}>
-      <h2>Contact Us</h2>
-      <form>
-        <div>
-          <input type="text" placeholder="Your Name" required style={{ padding: "8px", margin: "5px", width: "80%" }} />
-        </div>
-        <div>
-          <input type="email" placeholder="Your Email" required style={{ padding: "8px", margin: "5px", width: "80%" }} />
-        </div>
-        <div>
-          <textarea placeholder="Your Message" required style={{ padding: "8px", margin: "5px", width: "80%", height: "100px" }}></textarea>
-        </div>
-        <button type="submit" style={{ padding: "10px 20px", background: "blue", color: "white", border: "none", cursor: "pointer" }}>
-          Send
-        </button>
-      </form>
+    <div className="container bg-gray-100 mx-auto py-10">
+   
+
+      <h2 className="text-3xl font-bold text-center text-black-600 mb-6">Contact Us</h2>
+
+      <div className="max-w-lg mx-auto bg-white shadow-lg rounded-lg p-6">
+        <form>
+          <div className="mb-4">
+            <label className="block text-gray-700">Name</label>
+            <input type="text" className="w-full p-2 border rounded-lg outline-none" placeholder="Enter your name" />
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-700">Email</label>
+            <input type="email" className="w-full p-2 border rounded-lg outline-none" placeholder="Enter your email" />
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-700">Message</label>
+            <textarea className="w-full p-2 border rounded-lg outline-none" rows="4" placeholder="Your message"></textarea>
+          </div>
+          <button className="bg-black text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+            Send Message
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
