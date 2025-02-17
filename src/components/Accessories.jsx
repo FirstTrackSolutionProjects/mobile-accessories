@@ -1,15 +1,25 @@
 import React from "react";
 
+import AHeadphones from "../assets/AHeadphones.jpg";
+import ACharger from "../assets/Acharger.jpg";
+import ACovers from "../assets/Acovers.jpg";
+import APowerbanks from "../assets/APowerbanks.jpg";
+import ATemperglass from "../assets/ATemperglass.jpg";
+import AMobilelens from "../assets/AMobilelens.jpg";
+import AUsbcords from "../assets/AUsbcords.jpg";
+import AMemorychips from "../assets/AMemorychips.jpg";
+import AEarphones from "../assets/AEarphones.jpg";
+
 const images = [
-  "src/assets/AHeadphones.jpg",
-  "src/assets/Acharger.jpg",
-  "src/assets/Acovers.jpg",
-  "src/assets/APowerbanks.jpg",
-  "src/assets/ATemperglass.jpg",
-  "src/assets/AMobilelens.jpg",
-  "src/assets/AUsbcords.jpg",
-  "src/assets/AMemorychips.jpg",
-  "src/assets/AEarphones.jpg",
+  AHeadphones,
+  ACharger,
+  ACovers,
+  APowerbanks,
+  ATemperglass,
+  AMobilelens,
+  AUsbcords,
+  AMemorychips,
+  AEarphones,
 ];
 
 const Accessories = () => {
@@ -31,4 +41,3 @@ const Accessories = () => {
 };
 
 export default Accessories;
-
