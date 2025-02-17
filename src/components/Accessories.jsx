@@ -1,51 +1,29 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import "./Accessories.css";
 
-import bestoffersImg from "../assets/ABestoffers.jpg";
-import headphonesImg from "../assets/AHeadphones.jpg";
-import chargersImg from "../assets/ACharger.jpg";
-import coversImg from "../assets/ACovers.jpg";
-import powerbanksImg from "../assets/APowerbanks.jpg";
-import temperglassImg from "../assets/ATemperglass.jpg";
-import mobilelensImg from "../assets/AMobilelens.jpg";
-import usbcordImg from "../assets/AUsbcords.jpg";
-import memorychipsImg from "../assets/AMemorychips.jpg";
-import earphonesImg from "../assets/AEarphones.jpg";
+const images = [
+  "src/assets/AHeadphones.jpg",
+  "src/assets/Acharger.jpg",
+  "src/assets/Acovers.jpg",
+  "src/assets/APowerbanks.jpg",
+  "src/assets/ATemperglass.jpg",
+  "src/assets/AMobilelens.jpg",
+  "src/assets/AUsbcords.jpg",
+  "src/assets/AMemorychips.jpg",
+  "src/assets/AEarphones.jpg",
+];
 
 const Accessories = () => {
-  const navigate = useNavigate();
-
-  const accessories = [
-    { id: 1, name: "Headphones", image: headphonesImg, path: "/headphones" },
-    { id: 2, name: "Chargers", image: chargersImg, path: "/chargers" },
-    { id: 3, name: "Covers", image: coversImg, path: "/covers" },
-    { id: 4, name: "Power Banks", image: powerbanksImg, path: "/powerbanks" },
-    { id: 5, name: "Temper Glass", image: temperglassImg, path: "/temperglass" },
-    { id: 6, name: "Mobile lens", image: mobilelensImg, path: "/mobilelens" },
-    { id: 7, name: "USB cords", image: usbcordImg, path: "/USBcords" },
-    { id: 8, name: "memory chips", image: memorychipsImg, path: "/memorychips" },
-    { id: 9, name: "ear phones", image: earphonesImg, path: "/earphones" },
-  ];
-
   return (
-    <div className="accessories-section">
-      <div className="accessories-scroll-container">
-        <div className="accessories-container">
-          {accessories.map((accessory) => (
-            <div
-              key={accessory.id}
-              className="accessory-item"
-              onClick={() => navigate(accessory.path)}
-            >
-              <img
-                src={accessory.image}
-                alt={accessory.name}
-                className="accessory-image"
-              />
-            </div>
-          ))}
-        </div>
+    <div className="p-6 bg-gray-100">
+      <div className="flex space-x-4 overflow-x-auto  scrollbar-hide p-4">
+        {images.map((src, index) => (
+          <div
+            key={index}
+            className="flex-shrink-0 w-30 h-30   rounded-full overflow-hidden border-4 border-gray-300"
+          >
+            <img src={src} alt={`Item ${index}`} className="w-full h-full object-cover" />
+          </div>
+        ))}
       </div>
     </div>
   );

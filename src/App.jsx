@@ -4,17 +4,14 @@ import Navbar from "./components/Navbar";
 import Order from "./components/Order";
 import Refer from "./components/Refer";
 import Partner from "./components/Partner";
-
 import Accessories from "./components/Accessories"; 
 import Slideshow from "./components/Slideshow";
 import Products from "./components/Products";
 import SpecialOffers from "./components/SpecialOffers";
-import Categories from "./components/Categories";
 import MobileAccessories from "./components/MobileAccessories";
 import Footer from "./components/Footer2";
 import Contact from "./components/Contact";
 import About from "./components/About";
-import Home from "./components/Home";
 import Category from "./components/Category";
 import Shipping from "./components/Shipping";
 import Returns from "./components/Return";
@@ -42,11 +39,11 @@ const App = () => {
           path="/"
           element={
             <>
+              
               <Accessories />
               <Slideshow />
               <Products />
               <SpecialOffers />
-              <Categories />
               <MobileAccessories />
               
               <Footer /> 

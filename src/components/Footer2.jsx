@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import React from 'react'
- import "./Footer.css";
+
 
 const Footer = () => {
   return (
