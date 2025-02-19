@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./Slideshow.css";
 
 const Slideshow = () => {
   const images = [
@@ -14,7 +13,7 @@ const Slideshow = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); 
+    }, 5000);
     return () => clearInterval(interval);
   }, [images.length]);
 
@@ -29,16 +28,22 @@ const Slideshow = () => {
   };
 
   return (
-    <div className="slideshow">
+    <div className="relative w-full max-w-4xl mx-auto overflow-hidden shadow-lg">
       <img
         src={images[currentIndex]}
         alt={`Slide ${currentIndex + 1}`}
-        className="slideshow-image"
+        className="w-full h-96 object-cover"
       />
-      <button className="prev" onClick={goToPrevious}>
+      <button
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black text-white p-3 rounded-full"
+        onClick={goToPrevious}
+      >
         &#10094;
       </button>
-      <button className="next" onClick={goToNext}>
+      <button
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black text-white p-3 rounded-full"
+        onClick={goToNext}
+      >
         &#10095;
       </button>
     </div>

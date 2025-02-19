@@ -55,7 +55,7 @@ function Navbar() {
                 onClick={() => toggleDropdown("category")}
                 className="flex items-center justify-between w-full hover:text-yellow-400"
               >
-                category {activeDropdown === "category" ? <FaChevronUp /> : <FaChevronDown />}
+                Category {activeDropdown === "category" ? <FaChevronUp /> : <FaChevronDown />}
               </button>
               {activeDropdown === "category" && (
                 <div className="pl-4 mt-2 flex flex-col space-y-2 text-sm">
@@ -75,21 +75,20 @@ function Navbar() {
             <Link to="/refer" className="hover:text-yellow-400" onClick={toggleMenu}>Refer & Earn</Link>
             <Link to="/about" className="hover:text-yellow-400" onClick={toggleMenu}>About Us</Link>
 
-          
-
-            <div>
+          <div>
               <button
                 onClick={() => toggleDropdown("partner")}
-                className="flex items-center justify-between w-full hover:text-yellow-400"
+                className="flex items-center justify-between w-full cursor-pointer hover:text-yellow-400"
               >
-                partner {activeDropdown === "partner" ? <FaChevronUp /> : <FaChevronDown />}
+                Partner {activeDropdown === "partner" ? <FaChevronUp /> : <FaChevronDown />}
               </button>
               {activeDropdown === "partner" && (
                 <div className="pl-4 mt-2 space-y-2 text-sm">
                   <Link to="/partner/Menu upload" onClick={toggleMenu}>Menu upload</Link>
                  
                 </div>
-              )}
+               )}
+              
             </div>
           </nav>
         </div>

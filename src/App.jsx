@@ -1,16 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import SearchBar from "./components/Searchbar"; 
 import Order from "./components/Order";
 import Refer from "./components/Refer";
 import Partner from "./components/Partner";
+// import Upload from "./pages/Upload";
 import Accessories from "./components/Accessories"; 
 import Slideshow from "./components/Slideshow";
 import Products from "./components/Products";
 import SpecialOffers from "./components/SpecialOffers";
 import MobileAccessories from "./components/MobileAccessories";
-import Footer from "./components/Footer2";
+import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import About from "./components/About";
 
@@ -31,6 +32,7 @@ import MemoryChipsPage from "./pages/MemoryChipsPage";
 import EarphonesPage from "./pages/EarphonesPage"; 
 
 const App = () => {
+
   return (
     <Router>
       <Navbar /> 
@@ -55,11 +57,11 @@ const App = () => {
           }
         />
 
-
+     
         <Route path="/order" element={<Order/>} />
         <Route path="/refer" element={<Refer />} />
         <Route path="/partner" element={<Partner />} />
-
+        {/* <Route path="/upload" element={<Upload />} /> */}
        
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />

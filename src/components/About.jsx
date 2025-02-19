@@ -1,25 +1,43 @@
-import React from 'react';
+import React from "react";
 
 const AboutUs = () => {
   return (
-    <div className="bg-gray-50 py-12 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto text-center">
-       
-        <h2 className="text-3xl font-extrabold text-gray-800 sm:text-4xl mb-6">
-          About Us
-        </h2>
+    <div className="relative bg-gray-50 py-16 px-6 md:px-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        
+        <div className="relative">
+          <img
+            src="/assets/about-us.jpg"
+            alt="About Us"
+            className="w-full h-auto rounded-2xl shadow-lg"
+          />
+        </div>
 
        
-        <p className="text-lg text-gray-700 leading-relaxed mb-6">
-          Mobile Accessories is a mobile cover platform that strives to carve a niche for ourselves in case cover design and manufacturing. 
-          With a wide array of exclusive designs to cater to ladies and gentlemen across all age groups—from college-going Marvel groupies 
-          to the sophisticated office-goer—we have lived up to becoming a leading online portal that churns out high-quality cases 
-          with rich retailed printing for all possible models on a daily basis.
-        </p>
-        <p className="text-lg text-gray-700 leading-relaxed">
-          With expectations to keep pace with changing trends and an audience spoiled for choice, 
-          Mobile Accessories is steadily revamping to stand apart amongst an evolving crowd and also has a few wonderful things planned for the near future.
-        </p>
+        <div className="text-center md:text-left">
+          <h2 className="text-4xl font-extrabold text-gray-800 mb-6">
+            About Us
+          </h2>
+
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Mobile Accessories is a mobile cover platform that strives to carve 
+            a niche in case cover design and manufacturing. With a wide array of 
+            exclusive designs catering to all age groups—from college-going Marvel 
+            groupies to the sophisticated office-goer—we have become a leading 
+            online portal for high-quality cases with rich printing.
+          </p>
+
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Keeping pace with changing trends, we are revamping to stand out 
+            among an evolving crowd, with exciting plans for the near future.
+          </p>
+
+        
+          <a href="/shop" className="inline-block px-6 py-3 bg-black text-white text-lg 
+            font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+            Explore Now
+          </a>
+        </div>
       </div>
     </div>
   );
