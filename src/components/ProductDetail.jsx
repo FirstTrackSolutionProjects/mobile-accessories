@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 import { useSelector, useDispatch } from 'react-redux'
-import { addItem, removeItem } from '../redux/CartSlice/CartSlice'
+import { addItem, removeItem } from '../redux/cartSlice/cartSlice'
 
 const productData = {
   1: [
