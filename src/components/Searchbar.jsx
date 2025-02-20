@@ -12,10 +12,10 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <div className="flex justify-center items-center my-4">
+    <div className="flex justify-center items-center my-10">
       <form 
         onSubmit={handleSearch} 
-        className="flex items-center bg-gray-200 rounded-full px-4 py-2 w-[700px] shadow-sm"
+        className="flex items-center bg-gray-200 rounded-full px-4 py-2 w-[400px] shadow-sm"
       >
         <FiSearch className="text-black mr-2" size={20} /> 
         <input
@@ -23,7 +23,7 @@ const SearchBar = ({ onSearch }) => {
           placeholder="Search for products..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="bg-transparent  w-full text-gray-700"
+          className="bg-transparent w-full text-gray-700"
         />
       </form>
     </div>

@@ -3,11 +3,14 @@ import logo from "../assets/logo.jpg";
 import { FaShoppingCart, FaUser, FaBars, FaSearch, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const numberOfItems = useSelector((state) => state.cart.totalItems)
+  // const cartItems = useSelector((state) => state.cart.items)
 
   // Toggle Menu
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -21,20 +24,16 @@ function Navbar() {
     <nav className="flex items-center justify-between px-6 py-4 bg-gray-800 text-white shadow-md">
       
       <Link to="/" className="flex items-center text-yellow-400">
-        <img src={logo} alt="Logo" className="h-20 w-auto" />
+        <img src={logo} alt="Logo" className="h-25 w-25" />
       </Link>
 
-      <div className="flex items-center space-x-6">
+      <div className="flex items-center space-x-7">
         <Link to="/cart" className="relative">
           <FaShoppingCart className="text-white hover:text-yellow-400 text-xl" />
-          <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1">0</span>
+          <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1">{numberOfItems}</span>
         </Link>
-        <Link to="/login">
-          <FaUser className="text-white hover:text-yellow-400 text-xl" />
-        </Link>
-
-       
-        <button className="text-2xl md:hidden text-white hover:text-yellow-400" onClick={toggleMenu}>
+      
+       <button className="text-2xl md:hidden text-white hover:text-yellow-400" onClick={toggleMenu}>
           {isMenuOpen ? <IoMdClose /> : <FaBars />}
         </button>
       </div>
@@ -50,6 +49,8 @@ function Navbar() {
 
           <nav className="flex flex-col space-y-6 p-6 text-lg">
             <Link to="/" className="hover:text-yellow-400" onClick={toggleMenu}>Home</Link>
+            <Link to="/login" className="hover:text-yellow-400" onClick={toggleMenu}>Login</Link>
+
             <div>
               <button
                 onClick={() => toggleDropdown("category")}

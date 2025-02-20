@@ -50,21 +50,7 @@ const SpecialOffers = () => {
             </div>
           </div>
         </div>
-        <div className="bg-white p-4 rounded-lg shadow-md">
-          <h3 className="text-lg font-semibold mb-4">Top Offers Ending Soon</h3>
-          <div className="space-y-4">
-            <div className="flex flex-col items-center">
-              <img src="/assets/Mobile Phone Lens.jpg" alt="Mobile Phone Lens" className="w-24 h-24 object-cover" />
-              <p className="mt-2 font-medium">Mobile Phone Lens</p>
-              <span className="text-red-500 font-bold">Special offer</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <img src="/assets/tripod.jpg" alt="Tripods" className="w-24 h-24 object-cover" />
-              <p className="mt-2 font-medium">Tripods</p>
-              <span className="text-red-500 font-bold">Min. 40% Off</span>
-            </div>
-          </div>
-        </div>
+      
       </div>
     </section>
   );
