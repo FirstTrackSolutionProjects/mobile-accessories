@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux'
 import { addItem, removeItem } from '../redux/cartSlice/cartSlice'
 
+
 const productData = {
   1: [
     { id: 101, name: "Wireless Earbuds", originalPrice: "$50", offerPrice: "$40", image: "/assets/wireless_earbuds.jpg" },
