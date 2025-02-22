@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const products = [
-  { id: 1, name: "Bluetooth Earphones", image: "/assets/bluetooth_earphones.jpg" },
+  { id: 1, name: "Bluetooth Earphones", image: "/assets/Bluetooth_earphones.jpg" },
   { id: 2, name: "Chargers", image: "/assets/Chargers.jpg" },
   { id: 3, name: "Covers", image: "/assets/Covers.jpg" },
   { id: 4, name: "Tempered Glass", image: "/assets/Temperedglass.jpg" },

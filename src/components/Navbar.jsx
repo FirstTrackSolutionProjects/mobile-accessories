@@ -33,7 +33,7 @@ function Navbar() {
           <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1">{numberOfItems}</span>
         </Link>
       
-       <button className="text-2xl md:hidden text-white hover:text-yellow-400" onClick={toggleMenu}>
+       <button className="text-2xl  text-white hover:text-yellow-400" onClick={toggleMenu}>
           {isMenuOpen ? <IoMdClose /> : <FaBars />}
         </button>
       </div>
@@ -48,7 +48,8 @@ function Navbar() {
           </div>
 
           <nav className="flex flex-col space-y-6 p-6 text-lg">
-            <Link to="/" className="hover:text-yellow-400" onClick={toggleMenu}>Home</Link>
+         
+          <Link to="/" className="hover:text-yellow-400" onClick={toggleMenu}>Home</Link>
             <Link to="/login" className="hover:text-yellow-400" onClick={toggleMenu}>Login</Link>
 
             <div>
@@ -98,5 +99,5 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Navbar
 

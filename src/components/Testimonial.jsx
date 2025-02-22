@@ -7,7 +7,7 @@ const testimonials = [
     review:
       "These earbuds have exceeded my expectations! The sound quality is amazing, and the battery life lasts all day. Highly recommended!",
     name: "Aman K.",
-    avatar: "/avatar1.png",
+    avatar: "/Bavatar.png",
     rating: 5,
   },
   {
@@ -15,7 +15,7 @@ const testimonials = [
     review:
       "Super fast charging! It charges my phone in no time, and I don’t have to worry about overheating. Great buy!",
     name: "Priya S.",
-    avatar: "/avatar2.png",
+    avatar: "/Gavatar.png",
     rating: 4.5,
   },
   {
@@ -23,7 +23,7 @@ const testimonials = [
     review:
       "Very sturdy and holds my phone securely even on bumpy roads. A must-have accessory for every car owner.",
     name: "Rajat M.",
-    avatar: "/avatar3.png",
+    avatar: "/Bavatar.png",
     rating: 4,
   },
   {
@@ -31,7 +31,7 @@ const testimonials = [
     review:
       "Excellent quality case with a premium feel. It provides great protection and looks stylish!",
     name: "Neha R.",
-    avatar: "/avatar4.png",
+    avatar: "/Gavatar.png",
     rating: 5,
   },
   {
@@ -39,7 +39,7 @@ const testimonials = [
     review:
       "A sleek and efficient charging pad that works flawlessly with my phone. No more messy cables!",
     name: "Vikram T.",
-    avatar: "/avatar5.png",
+    avatar: "/Bavatar.png",
     rating: 4.5,
   },
 ];
@@ -78,7 +78,7 @@ const Testimonials = () => {
   return (
     <div className="bg-gray-100 py-12 px-6">
       <h2 className="text-center text-3xl font-bold mb-8">Customer Testimonials</h2>
-      <div className="max-w-3xl mx-auto overflow-hidden relative">
+      <div className="max-w-6xl mx-auto overflow-hidden relative">
         <div
           className="flex transition-transform duration-700 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}

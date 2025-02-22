@@ -8,8 +8,7 @@
 //   "/assets/ATemperglass.jpg",
 //   "/assets/AMobilelens.jpg",
 //   "/assets/AUsbcords.jpg",
-//   "/assets/AMemorychips.jpg",
-//   "/assets/AEarphones.jpg",
+//   "/assets/AMemorychips.jpg",//   "/assets/AEarphones.jpg",
 // ];
 
 // const Accessories = () => {
