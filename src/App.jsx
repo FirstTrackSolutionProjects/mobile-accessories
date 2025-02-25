@@ -22,7 +22,10 @@ import Returns from "./components/Return";
 import Terms from "./components/Term";
 import Privacy from "./components/Privacy";
 import LoginPage from "./components/LoginPage";
+
 import RegisterPage from "./pages/RegisterPage";
+import Dashboard from "./components/Dashboard";
+import Cart from "./components/Cart";
 
 const App = () => {
   return (
@@ -43,6 +46,8 @@ const App = () => {
               <OverTeam />
               <Newsletter />
               <Footer />
+              <Dashboard/>
+              <Cart/>
             </>
           }
         />
@@ -58,7 +63,7 @@ const App = () => {
         {/* User Authentication */}
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
-
+       
         {/* Orders & Partner Pages */}
         <Route path="/order" element={<Order />} />
         <Route path="/refer" element={<Refer />} />
