@@ -31,8 +31,9 @@ const App = () => {
   return (
     <CartProvider>
     <Router>
-      <div className="min-h-screen flex flex-col bg-white">
-        <Navbar />
+      <Navbar />
+      <div className="h-[calc(100vh-80px)] overflow-x-hidden overflow-y-auto flex flex-col bg-white">
+        
         <div className="container mx-auto px-4">
           <Routes>
             <Route
