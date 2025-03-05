@@ -2,7 +2,7 @@ import React from "react";
 
 const MobileAccessories = () => {
     return (
-        <section className="p-6 bg-gray-100">
+        <section className="p-6">
             <h2 className="text-3xl font-bold text-center mb-4">What Can You Buy From Us?</h2>
 
             <h3 className="text-xl font-bold mt-4">Mobile Phones</h3>

@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { useSelector, useDispatch } from 'react-redux'
 import { addItem, removeItem } from '../redux/cartslice/cartslice'
@@ -89,22 +90,36 @@ const productData = {
   ],
 };
 
+
 const ProductDetail = () => {
   const { id } = useParams();
   const ourProducts = productData[id] || [];
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  const navigate = useNavigate(); 
+
+  const handleAddToCart = (product) => {
+    dispatch(addItem(product));
+    navigate("/cart"); 
+  };
+
   return (
     <div className="py-12 bg-gray-100">
       <div className="max-w-6xl mx-auto px-6">
-       
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {ourProducts.map((product) => (
             <div key={product.id} className="bg-white p-4 rounded-lg shadow-md">
-              <img src={product.image} alt={product.name} className="w-full h-70 object-cover rounded-md" />
+              <img src={product.image} alt={product.name} className="w-full h-40 object-cover rounded-md" />
               <h3 className="text-lg font-bold text-gray-800 mt-4">{product.name}</h3>
-              <p className="text-gray-600">Original: <span className="line-through">{product.originalPrice}</span></p>
+              <p className="text-gray-600">
+                Original: <span className="line-through">{product.originalPrice}</span>
+              </p>
               <p className="text-red-500">Offer: {product.offerPrice}</p>
-              <button onClick={()=> dispatch(addItem({item: product}))} className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Add to Cart</button>
+              <button
+                onClick={() => handleAddToCart(product)}
+                className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+              >
+                Add to Cart
+              </button>
             </div>
           ))}
         </div>

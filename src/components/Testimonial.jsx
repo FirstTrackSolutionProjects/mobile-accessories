@@ -76,7 +76,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <div className="bg-gray-100 py-12 px-6">
+    <div className="py-12 px-6">
       <h2 className="text-center text-3xl font-bold mb-8">Customer Testimonials</h2>
       <div className="max-w-6xl mx-auto overflow-hidden relative">
         <div

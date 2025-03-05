@@ -12,7 +12,7 @@ const Newsletter = () => {
   };
 
   return (
-    <div className="bg-gray-100 py-10 px-5 text-center">
+    <div className="py-10 px-5 text-center">
       <h2 className="text-xl font-bold text-black mb-4">SUBSCRIBE TO OUR NEWSLETTER</h2>
       <form onSubmit={handleSubscribe} className="flex flex-col items-center space-y-3 w-full max-w-md mx-auto">
         <input

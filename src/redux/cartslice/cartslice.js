@@ -1,47 +1,50 @@
+// import { createSlice } from "@reduxjs/toolkit";
+
+// const cartSlice = createSlice({
+//   name: "cart",
+//   initialState: [],
+//   reducers: {
+//     addItem: (state, action) => {
+//       state.push(action.payload);
+//     },
+//   },
+// });
+
+// // Export actions
+// export const { addItem } = cartSlice.actions;
+
+// // Export reducer
+// export default cartSlice.reducer;
+
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  items: [],
-  totalItems: 0,
-};
-
-const cartslice = createSlice({
+const cartSlice = createSlice({
   name: "cart",
-  initialState,
+  initialState: [],
   reducers: {
     addItem: (state, action) => {
-      const { item } = action.payload;
-      const existingItem = state.items.find((i) => i.id === item.id);
-
+      const existingItem = state.find((item) => item.id === action.payload.id);
       if (existingItem) {
         existingItem.quantity += 1;
       } else {
-        state.items.push({ ...item, quantity: 1 });
+        state.push({ ...action.payload, quantity: 1 });
       }
-
-      // Update totalItems after adding
-      state.totalItems = state.items.reduce((sum, i) => sum + i.quantity, 0);
-      console.log(state.items)
     },
-
     removeItem: (state, action) => {
-      const { itemId } = action.payload;
-      const existingItem = state.items.find((i) => i.id === itemId);
-
-      if (existingItem) {
-        if (existingItem.quantity > 1) {
-          existingItem.quantity -= 1; // Decrement quantity
-        } else {
-          state.items = state.items.filter((item) => item.id !== itemId); // Remove item if quantity is 1
-        }
+      return state.filter((item) => item.id !== action.payload);
+    },
+    updateQuantity: (state, action) => {
+      const item = state.find((item) => item.id === action.payload.id);
+      if (item) {
+        item.quantity = action.payload.quantity;
       }
-
-      // Update totalItems after removing
-      state.totalItems = state.items.reduce((sum, i) => sum + i.quantity, 0);
-      console.log(state.items)
+    },
+    clearCart: () => {
+      return [];
     },
   },
 });
 
-export const { addItem, removeItem } = cartslice.actions;
-export default cartslice.reducer;
+export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;
+export default cartSlice.reducer;
+
