@@ -1,35 +1,35 @@
-// import React from "react";
-// import { useCart } from "../context/CartContext";
-// import { useNavigate } from "react-router-dom";
+// // src/components/Cart.jsx
+
+// import React from 'react';
+// import { useSelector } from 'react-redux';
+// import { Link } from 'react-router-dom';
 
 // const Cart = () => {
-//   const { cart, updateQuantity, removeFromCart } = useCart();
-//   const navigate = useNavigate();
-
-//   const handleCheckout = () => {
-//     navigate("/checkout");
-//   };
+//   const items = useSelector(state => state.cart.items);
 
 //   return (
-//     <div>
-//       <h2>Cart</h2>
-//       {cart.length === 0 ? (
-//         <p>Your cart is empty.</p>
+//     <div className="container mx-auto p-4">
+//       <h1 className="text-2xl font-bold mb-4">Your Cart</h1>
+//       {items.length === 0 ? (
+//         <p className="text-gray-600">Your cart is empty</p>
 //       ) : (
-//         cart.map((item) => (
-//           <div key={item.id} style={{ border: "1px solid #ddd", padding: "10px", margin: "10px" }}>
-//             <h3>{item.name} - ${item.offerPrice}</h3>
-//             <p>
-//               Quantity: 
-//               <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>-</button>
-//               {item.quantity}
-//               <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
-//             </p>
-//             <button onClick={() => removeFromCart(item.id)}>Remove</button>
-//           </div>
-//         ))
+//         <div className="space-y-4">
+//           {items.map(item => (
+//             <div key={item.id} className="flex items-center justify-between p-4 border rounded shadow">
+//               <div>
+//                 <h2 className="text-lg font-semibold">{item.title}</h2>
+//                 <p className="text-gray-500">Price: ₹{item.price}</p>
+//               </div>
+//               <img src={item.img} alt={item.title} className="w-16 h-16 object-cover rounded" />
+//             </div>
+//           ))}
+//         </div>
 //       )}
-//       {cart.length > 0 && <button onClick={handleCheckout}>Proceed to Checkout</button>}
+//       <Link to="/checkout">
+//         <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+//           Proceed to Checkout
+//         </button>
+//       </Link>
 //     </div>
 //   );
 // };

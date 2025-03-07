@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../assets/logo.jpg";
 import { FaShoppingCart, FaBars, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
@@ -10,13 +10,17 @@ function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const numberOfItems = useSelector((state) => state.cart.totalItems);
 
+  useEffect(() => {
+    console.log(numberOfItems)
+  },[])
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleDropdown = (menu) => {
     setActiveDropdown(activeDropdown === menu ? null : menu);
   };
 
   return (
-    <nav className="flex items-center justify-between w-full px-6 bg-gray-900 p-4 text-white shadow-lg">
+    <nav className="flex items-center justify-between w-full px-6 bg-gray-900 p-4 text-white shadow-lg h-20">
       {/* Logo */}
       <Link to="/" className="flex items-center text-yellow-400">
         <img src={logo} alt="Logo" className="h-18 w-18 rounded-full" />
@@ -70,9 +74,9 @@ function Navbar() {
       {/* Desktop Cart Icon */}
       <Link to="/cart" className="relative hidden lg:block ml-auto">
         <FaShoppingCart className="text-white hover:text-yellow-400 text-2xl" />
-        {numberOfItems > 0 && (
-          <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1">{numberOfItems}</span>
-        )}
+       
+          <span className="absolute -top-2 z-50 -right-2 bg-red-500 text-white text-xs rounded-full px-1">{numberOfItems}</span>
+      
       </Link>
 
       {/* Mobile Menu */}
@@ -108,4 +112,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
