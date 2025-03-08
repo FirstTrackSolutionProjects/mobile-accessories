@@ -25,7 +25,7 @@ import Privacy from "./components/Privacy";
 import LoginPage from "./components/LoginPage";
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
-// import OrdersPage from "./pages/OrdersPage";
+import OrderSummary from "./pages/OrderSummary";
 
 import RegisterPage from "./pages/RegisterPage";
 
@@ -33,9 +33,9 @@ const App = () => {
   return (
     <CartProvider>
     <Router>
-    <Navbar />
-    <div className="h-[calc(100vh-80px)] overflow-x-hidden overflow-y-auto flex flex-col bg-white">
-       
+      <Navbar />
+      <div className="h-[calc(100vh-80px)] overflow-x-hidden overflow-y-auto flex flex-col bg-white">
+        
         <div className="container mx-auto px-4">
           <Routes>
             <Route
@@ -68,7 +68,7 @@ const App = () => {
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/checkout" element={<CheckoutPage />} />
-            {/* <Route path="/orderspage" element={<OrdersPage />} /> */}
+            <Route path="/order-summary" element={<OrderSummary />} />
           </Routes>
         </div>
       </div>

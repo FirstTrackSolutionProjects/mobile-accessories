@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 
 const CheckoutPage = () => {
   const [selectedAddress, setSelectedAddress] = useState(0);
   const [showForm, setShowForm] = useState(false);
- 
+  const navigate = useNavigate();
 
   const addresses = [
     {

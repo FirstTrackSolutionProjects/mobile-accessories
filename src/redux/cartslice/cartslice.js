@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
 const initialState = {
   items: localStorage.getItem('cart_items')?JSON.parse(localStorage.getItem('cart_items')) : [],
   totalItems: localStorage.getItem('cart_items')?JSON.parse(localStorage.getItem('cart_items')).reduce((sum, i) => sum + i.quantity, 0) : 0,
@@ -47,5 +46,3 @@ const cartslice = createSlice({
   
   export const { addItem, removeItem } = cartslice.actions;
   export default cartslice.reducer;
-
-
