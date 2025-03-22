@@ -64,7 +64,7 @@ const Footer = () => {
         </div>
 
         <div className='mt-8 w-full text-center text-gray-500 border-t border-gray-700 pt-4'>
-          Copyright © 2024, Developed by 
+          Copyright © 2025, Developed by 
           <a href="https://firsttracksolution.tech" className='text-blue-400 hover:underline ml-1'>
             First Track Solution Technologies
           </a>
