@@ -1,144 +1,291 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import React from "react";
+// import { useCart } from "../context/CartContext";
+// import { Card, CardContent } from "../components/ui/card";
+// import { Button } from "../components/ui/button";
+// import { useEffect } from "react";
+// import { useSelector, useDispatch } from "react-redux";
+// const CheckoutPage = () => {
+//   const { cart, calculateTotal, clearCart } = useCart();
+//   const dispatch = useDispatch()
+//   const checkoutItems = useSelector((state)=>state.checkout.items)
+//   // Place Order Handler
+//   const handlePlaceOrder = () => {
+//     alert("Order placed successfully!");
+//     clearCart();
+//   };
+//   useEffect(()=>{},[])
+
+//   return (
+//     <div className="p-6 bg-gray-100 min-h-screen">
+//       <h1 className="text-3xl font-bold mb-4">Checkout</h1>
+
+//       {/* Returning Customer Section */}
+//       <Card className="p-6 mb-4 border ">
+//         <label className="flex items-center mb-2">
+//           <input type="checkbox" className="mr-2" />
+//           <span>
+//             Returning customer?{" "}
+//             <a href="#" className="text-green-600">
+//               Click here to login
+//             </a>
+//           </span>
+//         </label>
+
+//         <div className="flex gap-2 mt-2">
+//           <select className="p-2 border rounded-md">
+//             <option>IN +91</option>
+//             <option>US +1</option>
+//             <option>UK +44</option>
+//             <option>CA +1</option>
+//           </select>
+//           <input className="p-2 border rounded-md flex-1" placeholder="Phone" />
+//         </div>
+
+//         <div className="flex gap-4 mt-4">
+//           <Button className="w-full bg-blue-500">Login with OTP</Button>
+//           <Button className="w-full bg-blue-500">
+//             Login with Email & Password
+//           </Button>
+//         </div>
+
+//         <label className="flex items-center mt-4">
+//           <input type="checkbox" className="mr-2" />
+//           <span>
+//             Have a coupon?{" "}
+//             <a href="#" className="text-green-600">
+//               Click here to enter your code
+//             </a>
+//           </span>
+//         </label>
+//       </Card>
+
+//       {/* Billing Details */}
+//       <Card className="p-6 mb-4">
+//         <h2 className="text-xl font-semibold">Billing Details</h2>
+//         <div className="grid gap-4 mt-4">
+//           <input
+//             className="p-2 border rounded-md"
+//             placeholder="First Name"
+//             required
+//           />
+//           <input
+//             className="p-2 border rounded-md"
+//             placeholder="Last Name"
+//             required
+//           />
+//           <input
+//             className="p-2 border rounded-md"
+//             placeholder="Phone Number"
+//             required
+//           />
+//           <input
+//             className="p-2 border rounded-md"
+//             placeholder="Email Address"
+//             required
+//           />
+//           <input
+//             className="p-2 border rounded-md"
+//             placeholder="Street Address"
+//             required
+//           />
+//           <input
+//             className="p-2 border rounded-md"
+//             placeholder="City"
+//             required
+//           />
+//           <input
+//             className="p-2 border rounded-md"
+//             placeholder="State"
+//             required
+//           />
+//           <input
+//             className="p-2 border rounded-md"
+//             placeholder="PIN Code"
+//             required
+//           />
+//         </div>
+//       </Card>
+
+//       {/* Order Summary */}
+//       <Card className="p-6 mb-4">
+//         <h2 className="text-xl font-semibold">Your Order</h2>
+//         <div className="mt-4 space-y-2">
+//           {checkoutItems.length === 0 ? (
+//             <p>Your cart is empty.</p>
+//           ) : (
+//             checkoutItems.map((item) => (
+//               <div
+//                 key={item.id}
+//                 className="flex justify-between items-center p-2 border-b"
+//               >
+//                 <p>
+//                   {item.name}  {item.quantity}
+//                 </p>
+//                 <p>₹{item.price * item.quantity}</p>
+//               </div>
+//             ))
+//           )}
+//           <div className="flex justify-between font-bold text-lg mt-4">
+//             <p>Total:</p>
+//             <p>₹{calculateTotal()}</p>
+//           </div>
+//         </div>
+//       </Card>
+
+//       {/* Payment Method */}
+//       <Card className="p-6 mb-4">
+//         <h2 className="text-xl font-semibold">Payment Method</h2>
+//         <div className="mt-4 space-y-2">
+//           <label className="flex items-center">
+//             <input type="radio" name="payment" className="mr-2" />
+//             Cash on Delivery
+//           </label>
+//           <label className="flex items-center">
+//             <input type="radio" name="payment" className="mr-2" />
+//             Razorpay
+//           </label>
+//         </div>
+//       </Card>
+
+//       <Button
+//         className="mt-4 w-full bg-green-500 text-white py-2 rounded-md"
+//         onClick={handlePlaceOrder}
+//       >
+//         Place Order
+//       </Button>
+//     </div>
+//   );
+// };
+
+// export default CheckoutPage;
+
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { Card } from "../components/ui/card";
+import { Button } from "../components/ui/button";
+import { clearCheckoutItems } from "../redux/checkoutSlice/checkoutSlice";
 
 const CheckoutPage = () => {
-  const [selectedAddress, setSelectedAddress] = useState(0);
-  const [showForm, setShowForm] = useState(false);
-  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const checkoutItems = useSelector((state) => state.checkout.items);
 
-  const addresses = [
-    {
-      id: 1,
-      name: "Adya Ananya Mishra",
-      type: "HOME",
-      phone: "9348553817",
-      address: "In front of Raja Nibas, Telephone exchange Baikuntha Vihar lane 1, Keonjhar, Odisha",
-      pincode: "758001",
-    },
-  ];
+  // Place Order Handler
+  const handlePlaceOrder = () => {
+    alert("Order placed successfully!");
+    dispatch(clearCheckoutItems());
+  };
 
-  const handleDeliverHere = () => {
-    if (addresses[selectedAddress]) {
-      navigate("/order-summary", { state: { selectedAddress: addresses[selectedAddress] } });
-    }
+  // Calculate Total Price
+  const calculateTotal = () => {
+    return checkoutItems.reduce((sum, item) => sum + item.offerPrice * item.quantity, 0);
   };
 
   return (
-    <div className="max-w-6xl mx-auto p-4">
-      {/* DELIVERY ADDRESS HEADER */}
-      <div className="bg-gray-600 text-white p-3 flex justify-between items-center rounded-t-lg">
-        <span className="font-semibold text-lg flex items-center">
-          <span className="bg-white text-blue-600 rounded-full w-6 h-6 flex items-center justify-center mr-2 text-sm font-bold">
-            2
+    <div className="p-6 bg-gray-100 min-h-screen">
+      <h1 className="text-3xl font-bold mb-4">Checkout</h1>
+
+      {/* Returning Customer Section */}
+      <Card className="p-6 mb-4 border">
+        {/* <label className="flex items-center mb-2">
+          <input type="checkbox" className="mr-2" />
+          <span>
+            Returning customer?{" "}
+            <a href="#" className="text-green-600">
+              Click here to login
+            </a>
           </span>
-          DELIVERY ADDRESS
-        </span>
-      </div>
+        </label> */}
 
-      {/* ADDRESS LIST OR FORM */}
-      <div className="bg-white shadow-md p-4 rounded-b-lg">
-        {showForm ? (
-          // Address Form
-          <div>
-            <h2 className="text-lg font-semibold mb-3">ADD A NEW ADDRESS</h2>
-            <button className="bg-black text-white px-4 py-2 rounded-md">Use my current location</button>
-            <div className="grid grid-cols-2 gap-4 mt-4">
-              <input type="text" placeholder="Name" className="border p-2 rounded" />
-              <input type="text" placeholder="10-digit mobile number" className="border p-2 rounded" />
-              <input type="text" placeholder="Pincode" className="border p-2 rounded" />
-              <input type="text" placeholder="Locality" className="border p-2 rounded" />
-              <textarea placeholder="Address (Area and Street)" className="border p-2 rounded col-span-2"></textarea>
-              <input type="text" placeholder="City/District/Town" className="border p-2 rounded" />
-              <select className="border p-2 rounded">
-                <option>--Select State--</option>
-                <option>Odisha</option>
-                <option>Karnataka</option>
-              </select>
-              <input type="text" placeholder="Landmark (Optional)" className="border p-2 rounded" />
-              <input type="text" placeholder="Alternate Phone (Optional)" className="border p-2 rounded" />
-            </div>
-
-            {/* Address Type */}
-            <div className="mt-4">
-              <p className="font-semibold">Address Type</p>
-              <label className="mr-4">
-                <input type="radio" name="addressType" className="mr-2" /> Home (All day delivery)
-              </label>
-              <label>
-                <input type="radio" name="addressType" className="mr-2" /> Work (Delivery between 10 AM - 5 PM)
-              </label>
-            </div>
-
-            {/* Buttons */}
-            <div className="mt-4 flex space-x-4">
-              <button className="bg-orange-500 text-white px-4 py-2 rounded-md" onClick={() => setShowForm(false)}>
-                SAVE AND DELIVER HERE
-              </button>
-              <button className="text-blue-600" onClick={() => setShowForm(false)}>CANCEL</button>
-            </div>
-          </div>
-        ) : (
-          // Address List
-          <>
-            {addresses.map((addr, index) => (
-              <div
-                key={addr.id}
-                className={`border p-4 mb-2 rounded-md ${selectedAddress === index ? "border-black bg-red-50" : "border-gray-300"}`}
-              >
-                <label className="flex items-start space-x-3 cursor-pointer">
-                  <input
-                    type="radio"
-                    name="address"
-                    checked={selectedAddress === index}
-                    onChange={() => setSelectedAddress(index)}
-                    className="mt-1 accent-blue-600"
-                  />
-                  <div>
-                    <p className="font-semibold text-gray-800">{addr.name} <span className="text-sm bg-gray-200 px-2 py-0.5 rounded">{addr.type}</span> <span className="font-bold">{addr.phone}</span></p>
-                    <p className="text-gray-600">{addr.address}, <span className="font-bold">{addr.pincode}</span></p>
-                    {selectedAddress === index && (
-                      <button
-                        className="mt-3 bg-orange-500 text-white px-4 py-2 rounded-md text-sm cursor-pointer"
-                        onClick={handleDeliverHere}
-                      >
-                        DELIVER HERE
-                      </button>
-                    )}
-                  </div>
-                </label>
-              </div>
-            ))}
-
-            {/* Add New Address Button */}
-            <button className="text-blue-600 font-semibold flex items-center space-x-2 mt-2" onClick={() => setShowForm(true)}>
-              <span className="text-xl">+</span> <span>Add a new address</span>
-            </button>
-          </>
-        )}
-      </div>
-         {/* ORDER SUMMARY & PAYMENT OPTIONS */}
-         <div className="mt-4">
-        <div className="bg-gray-100 p-3 rounded-lg cursor-pointer">
-          <span className="text-gray-700 font-semibold">
-            <span className="bg-gray-300 text-gray-700 rounded-full w-6 h-6 flex items-center justify-center mr-2 text-sm font-bold inline-block">
-              3
-            </span>
-            ORDER SUMMARY
-          </span>
+        <div className="flex gap-2 mt-2">
+          <select className="p-2 border rounded-md">
+            <option>IN +91</option>
+            <option>US +1</option>
+            <option>UK +44</option>
+            <option>CA +1</option>
+          </select>
+          <input
+            className="p-2 border rounded-md flex-1"
+            placeholder="Phone"
+          />
         </div>
 
-        <div className="bg-gray-100 p-3 mt-2 rounded-lg cursor-pointer">
-          <span className="text-gray-700 font-semibold">
-            <span className="bg-gray-300 text-gray-700 rounded-full w-6 h-6 flex items-center justify-center mr-2 text-sm font-bold inline-block">
-              4
-            </span>
-            PAYMENT OPTIONS
-          </span>
+        <div className="flex gap-4 mt-4">
+          <Button className="w-full bg-blue-500">Login with OTP</Button>
+          <Button className="w-full bg-blue-500">
+            Login with Email & Password
+          </Button>
         </div>
+
+        <label className="flex items-center mt-4">
+          <input type="checkbox" className="mr-2" />
+          <span>
+            Have a coupon?{" "}
+            <a href="#" className="text-green-600">
+              Click here to enter your code
+            </a>
+          </span>
+        </label>
+      </Card>
+
+      {/* Billing Details */}
+      <Card className="p-6 mb-4">
+        <h2 className="text-xl font-semibold">Billing Details</h2>
+        <div className="grid gap-4 mt-4">
+          <input className="p-2 border rounded-md" placeholder="First Name" required />
+          <input className="p-2 border rounded-md" placeholder="Last Name" required />
+          <input className="p-2 border rounded-md" placeholder="Phone Number" required />
+          <input className="p-2 border rounded-md" placeholder="Email Address" required />
+          <input className="p-2 border rounded-md" placeholder="Street Address" required />
+          <input className="p-2 border rounded-md" placeholder="City" required />
+          <input className="p-2 border rounded-md" placeholder="State" required />
+          <input className="p-2 border rounded-md" placeholder="PIN Code" required />
+        </div>
+      </Card>
+
+      
+     {/* Order Summary */}
+      <Card className="p-6 mb-4">
+        <h2 className="text-xl font-semibold">Your Order</h2>
+          <div className="mt-4 space-y-2">
+            {checkoutItems.length > 0 && 
+              checkoutItems.map((item) => (
+                <div key={item.id} className="flex justify-between items-center p-2 border-b">
+            <p>{item.name} x {item.quantity}</p>
+            <p>₹{item.offerPrice * item.quantity}</p>
+        </div>
+      ))
+    }
+    <div className="flex justify-between font-bold text-lg mt-4">
+      <p>Total:</p>
+      <p>₹{calculateTotal()}</p>
+    </div>
       </div>
+    </Card>
+
+
+      {/* Payment Method */}
+      <Card className="p-6 mb-4">
+        <h2 className="text-xl font-semibold">Payment Method</h2>
+        <div className="mt-4 space-y-2">
+          <label className="flex items-center">
+            <input type="radio" name="payment" className="mr-2" />
+            Cash on Delivery
+          </label>
+          <label className="flex items-center">
+            <input type="radio" name="payment" className="mr-2" />
+            Razorpay
+          </label>
+        </div>
+      </Card>
+
+      <Button
+        className="mt-4 w-full bg-green-500 text-white py-2 rounded-md"
+        onClick={handlePlaceOrder}
+      >
+        Place Order
+      </Button>
     </div>
   );
 };
 
 export default CheckoutPage;
-

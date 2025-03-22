@@ -4,7 +4,7 @@ import { CartProvider } from "./context/CartContext";
 import Navbar from "./components/Navbar";
 import SearchBar from "./components/Searchbar";
 // import Cart from "./components/Cart.jsx";
-import Order from "./components/Order";
+
 import Refer from "./components/Refer";
 import Partner from "./components/Partner";
 import Slideshow from "./components/Slideshow";
@@ -24,8 +24,9 @@ import Terms from "./components/Term";
 import Privacy from "./components/Privacy";
 import LoginPage from "./components/LoginPage";
 import CartPage from "./pages/CartPage";
+import Order from "./pages/Order";
 import CheckoutPage from "./pages/CheckoutPage";
-import OrderSummary from "./pages/OrderSummary";
+import Payment from "./pages/PaymentPage";
 
 import RegisterPage from "./pages/RegisterPage";
 
@@ -62,13 +63,13 @@ const App = () => {
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
-            <Route path="/order" element={<Order />} />
+            <Route path="/orders" element={<Order />} />
             <Route path="/refer" element={<Refer />} />
             <Route path="/partner" element={<Partner />} />
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/checkout" element={<CheckoutPage />} />
-            <Route path="/order-summary" element={<OrderSummary />} />
+            <Route path="/payment" element={<Payment />} />
           </Routes>
         </div>
       </div>
