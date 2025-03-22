@@ -132,7 +132,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { Button } from "../components/ui/button";
+import  Button  from "../components/ui/Button";
 import { increaseQuantity, decreaseQuantity, removeItem } from "../redux/cartslice/cartslice";
 import { setCheckoutItems } from "../redux/checkoutSlice/checkoutSlice";
 import { Trash2, Plus, Minus } from "lucide-react";
