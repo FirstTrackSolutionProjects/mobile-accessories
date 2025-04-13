@@ -16,7 +16,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="flex items-center justify-between w-full px-6 bg-gray-800 p-4 text-white shadow-lg h-20">
+    <nav className="flex items-center justify-between w-full px-6 bg-zinc-700 p-4 text-white shadow-lg h-20">
       {/* Logo */}
       <Link to="/" className="flex items-center text-yellow-400">
         <img src={logo} alt="Logo" className="h-18 w-18 rounded-full" />
