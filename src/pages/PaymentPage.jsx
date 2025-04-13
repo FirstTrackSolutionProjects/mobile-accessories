@@ -1,47 +1,3 @@
-// import React from "react";
-// import { useLocation } from "react-router-dom";
-// import  Button  from "../components/ui/Button";
-
-// const Payment = () => {
-//   const { state } = useLocation();
-//   const order = state?.order;
-
-//   if (!order) {
-//     return <h2>No Payment Details Found</h2>;
-//   }
-
-//   const handlePaymentSuccess = () => {
-//     alert("Payment Successful!");
-    
-//   };
-
-//   return (
-//     <div className="p-6 bg-gray-100 min-h-screen">
-//       <h2 className="text-2xl font-bold mb-4">Payment Page</h2>
-//       <p>Order ID: #{order.id}</p>
-//       <p>Grand Total: ₹{order.total}</p>
-
-//       <div className="mt-4 bg-white p-4 rounded-lg shadow-md">
-//         <h3 className="text-lg font-semibold mb-2">Payment Method</h3>
-//         <select className="border p-2 rounded w-full mb-4">
-//           <option>Credit/Debit Card</option>
-//           <option>UPI</option>
-//           <option>Net Banking</option>
-//           <option>Cash on Delivery</option>
-//         </select>
-//         <Button 
-//           onClick={handlePaymentSuccess} 
-//           className="bg-blue-500 text-white w-full py-2 rounded-lg"
-//         >
-//           Pay Now
-//         </Button>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Payment;
-
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -51,14 +7,17 @@ const PaymentPage = () => {
   const order = state?.order || { total: 589, items: [1, 2, 3] };
 
   const [paymentMethod, setPaymentMethod] = useState("cod");
-  const [resell, setResell] = useState(false);
+  
+
+  const discountAmount = 42;
+  const discountedTotal = order.total - discountAmount;
 
   const handleContinue = () => {
     navigate("/confirmation", {
       state: {
         ...order,
         paymentMethod,
-        resell,
+        finalTotal: paymentMethod === "online" ? discountedTotal : order.total,
       },
     });
   };
@@ -88,7 +47,7 @@ const PaymentPage = () => {
               className="accent-purple-600"
             />
             <span className="text-lg font-semibold">₹{order.total}</span>
-            <span className="text-lg font-semibold">Cash on Delivery 🪙</span>
+            <span className="text-lg font-semibold">Cash on Delivery </span>
           </label>
         </div>
 
@@ -113,11 +72,11 @@ const PaymentPage = () => {
             <div>
               <p className="text-sm line-through">₹{order.total}</p>
               <p className="text-lg font-semibold text-green-600">
-                ₹{order.total - 42}{" "}
-                <span className="text-black">Pay Online 🪙</span>
+                ₹{discountedTotal}{" "}
+                <span className="text-black">Pay Online </span>
               </p>
               <span className="text-xs text-green-600 font-medium bg-green-100 px-2 py-1 rounded inline-block mt-1">
-                Save ₹42
+                Save ₹{discountAmount}
               </span>
             </div>
           </label>
@@ -132,15 +91,19 @@ const PaymentPage = () => {
           </h3>
 
           <div className="flex justify-between mb-2">
-            <span className=" text-sm">Total Product Price</span>
-            <span>+ ₹{order.total}</span>
+            <span className="text-sm">Total Product Price</span>
+            <span>
+              + ₹{paymentMethod === "online" ? discountedTotal : order.total}
+            </span>
           </div>
 
           <hr />
 
           <div className="flex justify-between mt-2 font-bold text-lg">
             <span>Order Total</span>
-            <span>₹{order.total}</span>
+            <span>
+              ₹{paymentMethod === "online" ? discountedTotal : order.total}
+            </span>
           </div>
 
           <button
@@ -156,5 +119,4 @@ const PaymentPage = () => {
 };
 
 export default PaymentPage;
-
 
