@@ -5,7 +5,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <>
-      <div className='w-full px-6 py-12 bg-gray-900 text-white flex flex-col items-center'>
+      <div className='w-full px-6 py-12 bg-zinc-800 text-white flex flex-col items-center'>
         {/* Logo & Branding */}
         <div className='flex flex-col items-center text-center'>
           <img
@@ -75,3 +75,7 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+
+
